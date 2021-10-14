@@ -1,0 +1,74 @@
+body{
+    font-family: Poppins;
+}
+
+.btn-custom-green{
+    background: #18A489;
+    color: white;
+}
+
+.btn-custom-orange{
+    background: #F29947;
+}
+
+.bg-orange-img{
+    background: url("../img/Rectangle 20.png");
+}
+.text-orange{
+    color: #F29947;
+}
+.text-green{
+    color:#18A489;
+}
+
+.text-purple{
+    color: #371841;
+}
+.orange-circle-1{
+    background: #F29947;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.feature{
+    padding-top: 20px;
+}
+
+.main-bg{
+    background: #FFFFFF;
+}
+
+footer{
+    box-shadow: -20px -20px 20px 0px #18A4891A;
+}
+
+.site-header{
+    box-shadow: 20px 20px 20px 0px #18A4891A;
+
+}
+
+.waitlist-input{
+    border: 1px solid rgb(170, 165, 165);
+}
+
+.waitlist-submit{
+    border: none;
+    color: black;
+}
+
+.landing-text{
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 50px;
+/* line-height: 90px; */
+}
+.text-user-type{
+    line-height: 30px;
+}
+
+.text{
+    margin-top: 50%;
+}
