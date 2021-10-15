@@ -10,6 +10,12 @@ line-height: 50px;
 .btn-custom-green{
     background: #18A489;
     color: white;
+
+
+    font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 50px;
 }
 
 .btn-custom-orange{
@@ -76,7 +82,7 @@ font-size: 50px;
 }
 
 .text{
-    margin-top: 50%;
+    margin-top: 60%;
 }
 
 .second-nav-link{
