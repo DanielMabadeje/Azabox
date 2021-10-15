@@ -1,5 +1,10 @@
 body{
     font-family: Poppins;
+    /* font-family: Poppins; */
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 50px;
 }
 
 .btn-custom-green{
