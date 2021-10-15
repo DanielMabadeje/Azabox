@@ -34,6 +34,7 @@ body{
 
 .feature{
     padding-top: 20px;
+    overflow: hidden;
 }
 
 .main-bg{
@@ -50,7 +51,7 @@ footer{
 }
 
 .waitlist-input{
-    border: 1px solid rgb(170, 165, 165);
+    border: 2px solid rgb(24, 164, 137, 0.2);
 }
 
 .waitlist-submit{
