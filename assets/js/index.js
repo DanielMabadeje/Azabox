@@ -11,12 +11,14 @@ $(document).ready(function() {
     if ($(window).scrollTop() > 550) {
         $('#navbar').removeClass('pt-4');
         $('#navbar').removeClass('pb-4');
+        $('#navbar').removeClass('py-4');
       $('#navbar').addClass('pt-2');
       $('#navbar').addClass('pb-2');
     }
 
     if ($(window).scrollTop() < 551) {
       $('#navbar').addClass('pt-4');
+        $('#navbar').addClass('pb-4');
         $('#navbar').addClass('pb-4');
       $('#navbar').removeClass('pt-2');
       $('#navbar').removeClass('pb-2');

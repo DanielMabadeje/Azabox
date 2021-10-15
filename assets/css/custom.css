@@ -73,3 +73,16 @@ font-size: 50px;
 .text{
     margin-top: 50%;
 }
+
+.second-nav-link{
+    border-bottom:1px solid gray;
+    color: gray;
+    font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+}
+.second-nav-link.active{
+    border-bottom: 1px solid #F29947;
+    color: #371841;
+}
