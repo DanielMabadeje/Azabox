@@ -44,7 +44,7 @@ line-height: 50px;
 }
 
 .feature{
-    padding-top: 20px;
+    padding-top: 10px;
     overflow: hidden;
 }
 
@@ -96,4 +96,13 @@ line-height: 27px;
 .second-nav-link.active{
     border-bottom: 1px solid #F29947;
     color: #371841;
+}
+
+.text-header{
+    font-size: 25px;
+line-height: 45px;
+/* identical to box height, or 180% */
+
+text-transform: uppercase;
+
 }
