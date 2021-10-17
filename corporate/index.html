@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../assets/css/custom.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/nav.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
@@ -29,9 +30,9 @@
                     
                   </div>
                   <div class="mr-auto text-right mt-4 col-6">
-                      <a href="" class="py-2">
-                          <img src="../assets/img/Group 8.png" alt="">
-                      </a>
+                    <label href="" class="py-2" for="page-nav-toggle">
+                        <img src="./assets/img/Group 8.png" alt="">
+                    </label>
                   </div>
                </div></div>
            
@@ -74,7 +75,7 @@
           </div>
 
 
-          <div class="second-nav col-md-3 col-5 mx-auto">
+          <div class="second-nav col-md-3 mx-auto">
               <!-- <nav class="navbar">
                   <div class="col-md-5 mx-auto text-center">
                       <ul class="navbar-nav row">
@@ -92,7 +93,7 @@
                 <div class="col-12" id="navbarNavAltMarkup">
                   <div class="navbar-nav mx-auto">
                     <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
-                    <a href="" class="nav-item nav-link p-2 active text-purple second-nav-link">INDIVIDUAL</a>
+                    <a href="../index.html" class="nav-item nav-link p-2 active text-purple second-nav-link">INDIVIDUAL</a>
                     <a href="" class="nav-item nav-link p-2 second-nav-link">CORPORATE</a>
                     
                   </div>
@@ -102,7 +103,7 @@
 
           <div class="user-type bg-green-img">
               <div class="p-5 text-center text-white col-md-6 mx-auto">
-                  <h3 class="text-green font-weight-bold">BE YOUR OWN FINANCIAL MANAGER</h3>
+                  <h3 class="text-orange font-weight-bold">BE YOUR OWN FINANCIAL MANAGER</h3>
                   <h4>Budget, save, Invest and track your cash flow</h4>
                   <div class="text-user-type">
                       <p>Spend, save and invest.
@@ -114,6 +115,27 @@
               </div>
           </div>
 
+          <input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" />
+
+          <nav class="main-navigation">
+              <!-- <h2><label for="page-nav-toggle" style="font-size: 30px; color:white;">x</label></h2> -->
+              <!-- <div class="col-12">
+                  <div class="col-2 ml-auto">
+                      <label for="page-nav-toggle"></label>
+                  </div>
+              </div> -->
+              <ul>
+                  <div class="col-12">
+                      <div class="col-2 ml-auto">
+                          <label for="page-nav-toggle" class="text-white">x</label>
+                      </div>
+                  </div>
+                  <!-- <label for="page-nav-toggle"></label> -->
+                  <li><a href="">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <!-- <li><a href="#0">Contact</a></li> -->
+              </ul>
+          </nav>
 
         <!-- Features -->
         <section class="features p-5">
@@ -142,6 +164,7 @@
                 <div class="feature_text col-md-4 text-left">
                     
                     <div class="text pt-5 text-purple">
+                        <i class="fa fa-usd text-white green-circle-1"></i>
                         <h5 class="text-orange text-header">SAVE IN STYLE</h5>
                         <p>Automate and customize your savings to suit your goals. Your dream lifestyle can be achieved. Whether you are saving for a big expense like a vacation, car, housing, family, education or saving until you are ready to invest. Azabox got you covered</p>
                         <a href="" class="btn p-2 btn-custom-orange pl-3 pr-3">Join the waiting list</a>
@@ -160,6 +183,7 @@
                 <div class="feature_text col-md-4 text-left">
                     
                     <div class="text pt-5 text-purple">
+                        <i class="fa fa-usd text-white green-circle-1"></i>
                         <h5 class="text-orange text-header">BE LIKE WARREN</h5>
                         <p>Make your money make more money for you. Grow
                             your money with time.
