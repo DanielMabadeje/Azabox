@@ -140,3 +140,7 @@ text-align: center;
 .navbar-nav{
     flex-direction: row !important;
 }
+
+.uppercase{
+    text-transform: uppercase;
+}
