@@ -144,3 +144,36 @@ text-align: center;
 .uppercase{
     text-transform: uppercase;
 }
+
+.multiple-bg{
+    background-image:  url('../img/Coin.png'), url('../img/Coin (1).png');
+  background-position:   right bottom, left top;
+  background-repeat: no-repeat, no-repeat;
+  padding-top: 30px !important;
+}
+.multi-bg{
+    
+    background-image:  url('../img/Coin (1).png');
+    background-position:  left;
+    background-repeat: no-repeat, no-repeat;
+    /* padding-top: 30px; */
+  }
+
+  .multi-bg2{
+    background-image:  url('../img/Coin.png'), url('../img/Coin (1).png');
+    background-position:   left top, right top;
+    background-repeat: no-repeat, no-repeat;
+  }
+  @media screen and(max-width:800px) {
+    .mul1{
+        background-image: none !important;
+    }
+}
+
+  .mul1{
+    background-image:   url('../img/Coin (1).png'), url('../img/Coin (1).png');
+    background-position:  left top, right;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+ 
