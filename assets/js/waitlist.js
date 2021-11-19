@@ -274,6 +274,59 @@
 // });
 
 
+// $('.my-form').each(function() {
+//   // console.log($(this).text());
+//   $(this).submit(function(e) {
+//     //prevent the form from submiting so we can post to the google form
+//     e.preventDefault();
+//     //AJAX request
+  
+//     // console.log("clicked");
+
+//     swal("What do you want to wait for?", {
+//         buttons: {
+//           Individual: "Individual",
+//           catch: {
+//             text: "Corporate",
+//             value: "Business",
+//           },
+//           Both:"Both",
+//         //   defeat: true,
+//         },
+//       })
+//       .then((value) => {
+
+//         // alert(value);
+
+//         var data=$('#my-form').serialize()
+//         // data['entry.775823104_sentinel']=value
+
+//         data["entry.775823104"]=value
+//         $.ajax({
+//             url: 'https://docs.google.com/forms/d/e/1WsAIEVBiVIlC7g24trGNWiNxBYuNwQZQ2o35_UwZEXg/formResponse',     //The public Google Form url, but replace /view with /formResponse
+//             data: data, //Nifty jquery function that gets all the input data
+//             type: 'POST', //tells ajax to post the data to the url
+//             dataType: "json", //the standard data type for most ajax requests
+//             statusCode: { //the status code from the POST request
+//               0: function(data) { //0 is when Google gives a CORS error, don't worry it went through
+//                 //success
+//                 $('#form-success').text('hooray!');
+//               },
+//               200: function(data) {//200 is a success code. it went through!
+//                 //success
+//                 $('#form-success').text('hooray!');
+//               },
+//               403: function(data) {//403 is when something went wrong and the submission didn't go through
+//                 //error
+//                 alert('Oh no! something went wrong. we should check our code to make sure everything matches with Google');
+//               }
+//             }  
+//         });
+//       })
+//     })
+// });
+
+
 $('.my-form').each(function() {
   // console.log($(this).text());
   $(this).submit(function(e) {
@@ -283,45 +336,42 @@ $('.my-form').each(function() {
   
     // console.log("clicked");
 
-    swal("What do you want to wait for?", {
-        buttons: {
-          Individual: "Individual",
-          catch: {
-            text: "Corporate",
-            value: "Business",
+    var value="sd"
+    var data=$(this).serialize()
+    // data['entry.775823104_sentinel']=value
+  
+    // data["entry.775823104"]=value
+    var email=this.getElementsByClassName("email")[0].value
+    var waitfor=this.getElementsByClassName("wait_for")[0].value
+
+
+    data['entry.1911968125']=email
+    data['entry.775823104']=waitfor
+    // console.log(email, waitfor)
+    // return
+    $.ajax({
+        url: 'https://docs.google.com/forms/d/e/1WsAIEVBiVIlC7g24trGNWiNxBYuNwQZQ2o35_UwZEXg/formResponse',     //The public Google Form url, but replace /view with /formResponse
+        data: data, //Nifty jquery function that gets all the input data
+        type: 'POST', //tells ajax to post the data to the url
+        dataType: "json", //the standard data type for most ajax requests
+        statusCode: { //the status code from the POST request
+          0: function(data) { //0 is when Google gives a CORS error, don't worry it went through
+            //success
+            console.log("Success")
+            $('#form-success').text('hooray!');
           },
-          Both:"Both",
-        //   defeat: true,
-        },
-      })
-      .then((value) => {
+          200: function(data) {//200 is a success code. it went through!
+            //success
+            console.log("Success")
+            $('#form-success').text('hooray!');
+          },
+          403: function(data) {//403 is when something went wrong and the submission didn't go through
+            //error
+            alert('Oh no! something went wrong. we should check our code to make sure everything matches with Google');
+          }
+        }  
+    });
+ 
 
-        // alert(value);
-
-        var data=$('#my-form').serialize()
-        // data['entry.775823104_sentinel']=value
-
-        data["entry.775823104"]=value
-        $.ajax({
-            url: 'https://docs.google.com/forms/d/e/1WsAIEVBiVIlC7g24trGNWiNxBYuNwQZQ2o35_UwZEXg/formResponse',     //The public Google Form url, but replace /view with /formResponse
-            data: data, //Nifty jquery function that gets all the input data
-            type: 'POST', //tells ajax to post the data to the url
-            dataType: "json", //the standard data type for most ajax requests
-            statusCode: { //the status code from the POST request
-              0: function(data) { //0 is when Google gives a CORS error, don't worry it went through
-                //success
-                $('#form-success').text('hooray!');
-              },
-              200: function(data) {//200 is a success code. it went through!
-                //success
-                $('#form-success').text('hooray!');
-              },
-              403: function(data) {//403 is when something went wrong and the submission didn't go through
-                //error
-                alert('Oh no! something went wrong. we should check our code to make sure everything matches with Google');
-              }
-            }  
-          });
-      })
-      })
+  })
 });

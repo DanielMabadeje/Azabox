@@ -53,14 +53,18 @@
 
                   <form action="" class="col-md-7 p-0 my-form">
                     <div class="form-input form-row p-0">
-                        <input type="text" class="waitlist-input p-2 pl-0 pr-0 col-7" placeholder="Enter your email address">
-                        <div class="input-group-append col-3 pl-0 pr-0 bg-orange">
+                        <input type="text" class="waitlist-input p-2 pl-0 pr-0 col-7 email" placeholder="Enter your email address">
+                        <!-- <div class="input-group-append col-3 pl-0 pr-0 bg-orange">
                             <button class="btn btn-custom-orange text-white pl-0 pr-0 waitlist-input border-0 dropdown-toggle col-12" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Individual</button>
                             <div class="dropdown-menu">
                               <a class="dropdown-item" href="#">Individual</a>
                               <a class="dropdown-item" href="#">Corporate</a>
                             </div>
-                          </div>
+                          </div> -->
+                          <select name="wait_for" class="waitlist-input col-3 pl-0 pr-0 bg-aza-orange text-white wait_for" id="cars">
+                              <option value="Individual">Individual</option>
+                              <option value="Corporate">Corporate</option>
+                          </select>
                         <button class="btn-custom-light-green col-2 pl-0 pr-0 p-2 waitlist-submit"><i class="fa fa-paper-plane"></i></button>
                     </div>
                   </form>
@@ -306,14 +310,18 @@
                                     
                                         <form action="" class="pt-4 mb-5 pb-5 my-form">
                                             <div class="form-input form-row p-0">
-                                                <input type="text" class="waitlist-input p-2 pl-0 pr-0 col-7" placeholder="Enter your email address">
-                                                <div class="input-group-append  col-5 col-md-3 pl-0 pr-0 bg-orange">
+                                                <input type="text" class="waitlist-input p-2 pl-0 pr-0 col-7 email" placeholder="Enter your email address">
+                                                <!-- <div class="input-group-append  col-5 col-md-3 pl-0 pr-0 bg-orange">
                                                     <button class="btn btn-custom-orange text-white pl-0 pr-0 waitlist-input border-0 dropdown-toggle col-12" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Individual</button>
                                                     <div class="dropdown-menu">
                                                       <a class="dropdown-item" href="#">Individual</a>
                                                       <a class="dropdown-item" href="#">Corporate</a>
                                                     </div>
-                                                  </div>
+                                                  </div> -->
+                                                  <select name="wait_for" class="waitlist-input col-5 col-md-3 pl-0 pr-0 bg-aza-orange text-white" id="cars">
+                                                    <option value="Individual" class="bg-orange">Individual</option>
+                                                    <option value="Corporate" class="bg-orange">Corporate</option>
+                                                </select>
                                                 <button class="btn-custom-light-green col-md-2 pl-0 pr-0 p-2 waitlist-submit"><i class="fa fa-paper-plane"></i></button>
                                             </div>
                                           
@@ -356,7 +364,7 @@
     <script src="https://use.fontawesome.com/3ce931e28e.js"></script>
     <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
     <script src="./assets/js/index.js"></script>
-    <!-- <script src="./assets/js/waitlist.js"></script> -->
+    <script src="./assets/js/waitlist.js"></script>
     <script>
         AOS.init(0);
       </script>
