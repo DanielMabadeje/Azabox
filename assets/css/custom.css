@@ -28,6 +28,10 @@ line-height: 50px;
 .bg-green-img{
     background: url("../img/Rectangle 21.png");
 }
+
+.bg-aza-purple{
+    background: #042E45;
+}
 .text-orange{
     color: #F29947;
 }
@@ -51,11 +55,11 @@ line-height: 50px;
 
 .green-circle-1{
     background: #18A489;
-    /* height: 20px; */
-    padding: 20px;
-    /* width: 20px; */
+    height: 46.8px;
+    /* padding: 20px; */
+    width: 46px;
     border-radius: 50%;
-    /* text-align: center; */
+    text-align: center;
 }
 
 .feature{
@@ -97,7 +101,11 @@ font-size: 50px;
 }
 
 .text{
-    margin-top: 60%;
+    margin-top: 16%;
+}
+
+.second-nav{
+    border-bottom: 1px solid #F29947;
 }
 
 .second-nav-link{
@@ -131,7 +139,7 @@ font-size: 65px;
     font-style: normal;
 font-weight: normal;
 font-size: 24px;
-/* line-height: 55px; */
+line-height: 55px;
 /* or 229% */
 
 text-align: center;
@@ -176,4 +184,16 @@ text-align: center;
     background-repeat: no-repeat, no-repeat;
   }
 
- 
+ .green-img-bg{
+     background: url("../img/rectangle 20.png");
+     background-size: cover;
+ }
+
+
+ .coins-bg{
+    background: url("../img/Group 20.png");
+    background-size: cover;
+ }
+ .border-0{
+     border-radius: 0 !important;
+ }
