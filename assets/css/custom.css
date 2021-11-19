@@ -27,9 +27,11 @@ line-height: 50px;
 
 .bg-orange-img{
     background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/Rectangle 20.png");
+    background-attachment: fixed;
 }
 .bg-green-img{
     background: linear-gradient(to right, rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.616)), url("../img/Rectangle 21.png");
+    background-attachment: fixed;
 }
 
 .bg-aza-purple{
