@@ -198,7 +198,7 @@ text-align: center;
   }
 
  .green-img-bg{
-     background: url("../img/rectangle 20.png");
+     background: url("../img/Rectangle 20.png");
      background-size: cover;
  }
 
@@ -215,4 +215,9 @@ text-align: center;
  .purple-divider{
      height: 5px;
 
+ }
+
+ .vector{
+    background: url('../img/vector.png'); 
+    background-repeat: no-repeat;
  }
