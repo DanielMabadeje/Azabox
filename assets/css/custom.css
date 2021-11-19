@@ -218,6 +218,6 @@ text-align: center;
  }
 
  .vector{
-    background: url('../img/vector.png'); 
+    background: url("../img/Vector.png"); 
     background-repeat: no-repeat;
  }
