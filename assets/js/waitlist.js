@@ -337,9 +337,9 @@ $('.my-form').each(function() {
     // console.log("clicked");
 
     // var value="sd"
-    // var data=$(this).serialize()
+    var data=$(this).serialize()
 
-    var data=[]
+    // var data=[]
     // data['entry.775823104_sentinel']=value
   
     // data["entry.775823104"]=value
@@ -347,8 +347,8 @@ $('.my-form').each(function() {
     var waitfor=this.getElementsByClassName("wait_for")[0].value
 
 
-    data['entry.1911968125']=email
-    data['entry.775823104']=waitfor
+    // data['entry.1911968125']=email
+    // data['entry.775823104']=waitfor
     // console.log(email, waitfor)
     // return
 
