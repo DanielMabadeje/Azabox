@@ -336,8 +336,10 @@ $('.my-form').each(function() {
   
     // console.log("clicked");
 
-    var value="sd"
-    var data=$(this).serialize()
+    // var value="sd"
+    // var data=$(this).serialize()
+
+    var data=[]
     // data['entry.775823104_sentinel']=value
   
     // data["entry.775823104"]=value
