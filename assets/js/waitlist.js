@@ -362,12 +362,12 @@ $('.my-form').each(function() {
           0: function(data) { //0 is when Google gives a CORS error, don't worry it went through
             //success
             console.log("Success")
-            $('#form-success').text('hooray!');
+            // $('#form-success').text('hooray!');
           },
           200: function(data) {//200 is a success code. it went through!
             //success
             console.log("Success")
-            $('#form-success').text('hooray!');
+            // $('#form-success').text('hooray!');
           },
           403: function(data) {//403 is when something went wrong and the submission didn't go through
             //error
