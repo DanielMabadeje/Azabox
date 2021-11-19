@@ -349,8 +349,10 @@ $('.my-form').each(function() {
     data['entry.775823104']=waitfor
     // console.log(email, waitfor)
     // return
+
+    // forms/d/e/1WsAIEVBiVIlC7g24trGNWiNxBYuNwQZQ2o35_UwZEXg/formResponse
     $.ajax({
-        url: 'https://docs.google.com/forms/d/e/1WsAIEVBiVIlC7g24trGNWiNxBYuNwQZQ2o35_UwZEXg/formResponse',     //The public Google Form url, but replace /view with /formResponse
+        url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSd1WbBQC2UxvoICbi35KQBztmC5dLYDSP5O43fY3Wzb76x6xg/formResponse',     //The public Google Form url, but replace /view with /formResponse  /forms/u/0/d/e/1FAIpQLSd1WbBQC2UxvoICbi35KQBztmC5dLYDSP5O43fY3Wzb76x6xg/formResponse
         data: data, //Nifty jquery function that gets all the input data
         type: 'POST', //tells ajax to post the data to the url
         dataType: "json", //the standard data type for most ajax requests

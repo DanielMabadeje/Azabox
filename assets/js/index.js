@@ -6,7 +6,7 @@ $(document).ready(function() {
   //you know the position.
   $(window).scroll(function () { 
 
-    console.log($(window).scrollTop());
+    // console.log($(window).scrollTop());
 
     if ($(window).scrollTop() > 550) {
         $('#navbar').removeClass('pt-4');
