@@ -1,12 +1,15 @@
 body{
-    font-family: Poppins;
     /* font-family: Poppins; */
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 50px;
+    /* font-family: Poppins; */
+    font-family: GT Walsheim Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 50px;
 }
-
+.btn-custom-light-green{
+    background: #36E29A;
+}
 .btn-custom-green{
     background: #18A489;
     color: white;
@@ -23,20 +26,27 @@ line-height: 50px;
 }
 
 .bg-orange-img{
-    background: url("../img/Rectangle 20.png");
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/Rectangle 20.png");
 }
 .bg-green-img{
-    background: url("../img/Rectangle 21.png");
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.616)), url("../img/Rectangle 21.png");
 }
 
 .bg-aza-purple{
     background: #042E45;
+    
+}
+.bg-aza-orange{
+    background-color: #F29947;
 }
 .text-orange{
     color: #F29947;
 }
 .text-green{
     color:#18A489;
+}
+.text-light-green{
+    color: #36E29A;
 }
 
 .text-purple{
@@ -54,7 +64,8 @@ line-height: 50px;
 }
 
 .green-circle-1{
-    background: #18A489;
+    /* background: #18A489; */
+    background: #36E29A;
     height: 46.8px;
     /* padding: 20px; */
     width: 46px;
@@ -72,7 +83,7 @@ line-height: 50px;
 }
 
 footer{
-    box-shadow: -20px -20px 20px 0px #18A4891A;
+    /* box-shadow: -20px -20px 20px 0px #18A4891A; */
 }
 
 .site-header{
@@ -196,4 +207,10 @@ text-align: center;
  }
  .border-0{
      border-radius: 0 !important;
+ }
+
+ /* dividers */
+ .purple-divider{
+     height: 5px;
+
  }
