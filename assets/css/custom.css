@@ -103,7 +103,8 @@ footer{
 }
 
 .landing-text{
-    font-family: Poppins;
+/*    font-family: Poppins; */
+    font-family: GT Walsheim Pro;
 font-style: normal;
 font-weight: bold;
 font-size: 50px;
