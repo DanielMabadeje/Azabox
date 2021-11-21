@@ -1,3 +1,9 @@
+*{
+    font-family: 'GT Walsheim Pro';
+    font-style: normal;
+    font-weight: normal;
+}
+
 body{
     /* font-family: Poppins; */
     /* font-family: Poppins; */
@@ -103,12 +109,12 @@ footer{
 }
 
 .landing-text{
-/*    font-family: Poppins; */
+    /*    font-family: Poppins; */
     font-family: 'GT Walsheim Pro';
-font-style: normal;
-font-weight: bold;
-font-size: 50px;
-/* line-height: 90px; */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    /* line-height: 90px; */
 }
 .text-user-type{
     line-height: 30px;
@@ -186,11 +192,7 @@ font-size: 50px;
     background-position:   left top, right top;
     background-repeat: no-repeat, no-repeat;
   }
-  @media screen and(max-width:800px) {
-    .mul1{
-        background-image: none !important;
-    }
-}
+  
 
   .mul1{
     background-image:   url('../img/Coin (1).png'), url('../img/Coin (1).png');
@@ -208,13 +210,23 @@ font-size: 50px;
     background: url("../img/Group 20.png");
     background-size: cover;
  }
+
+ @media screen and (max-width:800px) {
+    .coins-bg{
+        background: none !important;
+    }
+
+    .green-img-bg{
+        background: none !important;
+    }
+}
  .border-0{
      border-radius: 0 !important;
  }
 
  /* dividers */
  .purple-divider{
-     height: 5px;
+     height: 4px;
 
  }
 
