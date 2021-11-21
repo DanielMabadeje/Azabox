@@ -126,9 +126,9 @@ font-size: 50px;
     border-bottom:1px solid gray;
     color: gray;
     font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 27px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
 }
 .second-nav-link.active{
     border-bottom: 1px solid #F29947;
@@ -137,26 +137,26 @@ line-height: 27px;
 
 .text-header{
     font-size: 25px;
-line-height: 45px;
-/* identical to box height, or 180% */
+    line-height: 45px;
+    /* identical to box height, or 180% */
 
-text-transform: uppercase;
+    text-transform: uppercase;
 
 }
 .lead-text{
     font-style: normal;
-font-weight: bold;
-font-size: 65px;
-/* line-height: 90px; */
+    font-weight: bold;
+    font-size: 65px;
+    /* line-height: 90px; */
 }
 .simple-about{
     font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 55px;
-/* or 229% */
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 55px;
+    /* or 229% */
 
-text-align: center;
+    text-align: center;
 }
 
 .navbar-nav{
@@ -169,9 +169,9 @@ text-align: center;
 
 .multiple-bg{
     background-image:  url('../img/Coin.png'), url('../img/Coin (1).png');
-  background-position:   right bottom, left top;
-  background-repeat: no-repeat, no-repeat;
-  padding-top: 30px !important;
+    background-position:   right bottom, left top;
+    background-repeat: no-repeat, no-repeat;
+    padding-top: 30px !important;
 }
 .multi-bg{
     
