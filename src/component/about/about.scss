@@ -1,0 +1,23 @@
+.about{
+    background-color: #CDE3EF;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 80px;
+
+    .title{
+        font-size: 40px;
+        font-weight: 600;
+        color: #371841;
+
+        >span{
+            color: #36E29A;
+        }
+    }
+
+    .cont{
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 2;
+    }
+}

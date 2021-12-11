@@ -1,0 +1,505 @@
+.business {
+  background-color: #fff;
+
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    padding: 50px 80px;
+
+    .title {
+      font-size: 40px;
+      font-weight: 600;
+      display: flex;
+      color: #36e29a;
+      width: 18%;
+
+      > span {
+        color: #371841;
+      }
+    }
+
+    .container {
+      height: 50px;
+      width: 25%;
+      padding: 0;
+      border-radius: 40px;
+      border: 2px solid rgba(24, 164, 137, 0.2);
+      margin-left: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .individual {
+        padding: 9px 5px;
+        width: 50%;
+        border-radius: 40px;
+        border: none;
+        background-color: #36e29a;
+        color: #fff;
+      }
+      .business {
+        padding: 9px 5px;
+        width: 50%;
+        border-radius: 40px;
+        border: none;
+        background-color: #fff;
+        color: #371841;
+      }
+    }
+  }
+
+  .individualSection {
+    .mid {
+      width: 100%;
+      height: 400px;
+      background-color: #36e29a;
+
+      .background {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.637),
+            rgba(0, 0, 0, 0.637)
+          ),
+          url("assets/Rectangle.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 70px 0;
+
+          .contentTitle {
+            font-size: 30px;
+            font-weight: 500;
+            color: #36e29a;
+            top: 50px;
+          }
+
+          .budget {
+            margin-top: 30px;
+            font-size: 25px;
+            font-weight: 400;
+            color: #fff;
+          }
+
+          .spend {
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 300;
+            color: #fff;
+            text-align: center;
+            word-spacing: 5px;
+          }
+
+          .joim {
+            margin-top: 25px;
+            font-size: 18px;
+            padding: 10px 43px;
+            background-color: #36e29a;
+            color: #371841;
+            border-radius: 40px;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 80px;
+
+      .featureTitle {
+        font-size: 40px;
+        font-weight: 500;
+        color: #371841;
+        text-align: center;
+      }
+
+      .firstCont {
+        display: flex;
+        padding: 100px 0;
+        .firstImg {
+          width: 100%;
+
+          > img {
+            width: 600px;
+            height: 600px;
+          }
+        }
+
+        .firstContent {
+          width: 80%;
+          padding-top: 100px;
+          padding-right: 50px;
+          padding-left: 50px;
+          .circle {
+            width: 85px;
+            height: 85px;
+            background-color: #f29947;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+
+          .tracking {
+            font-size: 25px;
+            font-weight: 500;
+            color: #f29947;
+            margin-top: 30px;
+          }
+
+          .trackCont {
+            font-size: 20px;
+            font-weight: 400;
+            word-spacing: 5px;
+            line-height: 2;
+            margin-top: 30px;
+            color: #371841;
+          }
+        }
+      }
+
+      .secondCont {
+        display: flex;
+        padding: 100px 0;
+
+        .secondContent {
+          width: 80%;
+          padding-top: 100px;
+          padding-right: 50px;
+          padding-left: 50px;
+          .circle {
+            width: 85px;
+            height: 85px;
+            background-color: #f29947;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+
+          .save {
+            font-size: 25px;
+            font-weight: 500;
+            color: #f29947;
+            margin-top: 30px;
+          }
+
+          .saveCont {
+            font-size: 20px;
+            font-weight: 400;
+            word-spacing: 5px;
+            line-height: 2;
+            margin-top: 30px;
+            color: #371841;
+          }
+        }
+
+        .secondImg {
+          width: 100%;
+
+          > img {
+            width: 600px;
+            height: 600px;
+          }
+        }
+      }
+
+      .thirdCont {
+        display: flex;
+        padding: 100px 0;
+        .thirdImg {
+          width: 100%;
+
+          > img {
+            width: 600px;
+            height: 600px;
+          }
+        }
+
+        .thirdContent {
+          width: 80%;
+          padding-top: 100px;
+          padding-right: 50px;
+          padding-left: 50px;
+          .circle {
+            width: 85px;
+            height: 85px;
+            background-color: #f29947;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+
+          .warren {
+            font-size: 25px;
+            font-weight: 500;
+            color: #f29947;
+            margin-top: 30px;
+          }
+
+          .warrenCont {
+            font-size: 20px;
+            font-weight: 400;
+            word-spacing: 5px;
+            line-height: 2;
+            margin-top: 30px;
+            color: #371841;
+          }
+        }
+      }
+    }
+  }
+
+  .businessSection {
+    .mid {
+      width: 100%;
+      height: 400px;
+      background-color: #36e29a;
+
+      .background {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.637),
+            rgba(0, 0, 0, 0.637)
+          ),
+          url("assets/Rectangle.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 70px 0;
+
+          .contentTitle {
+            font-size: 30px;
+            font-weight: 500;
+            color: #F29947;
+            top: 50px;
+          }
+
+          .grow {
+            margin-top: 30px;
+            font-size: 25px;
+            font-weight: 400;
+            color: #fff;
+          }
+
+          .expenses {
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 300;
+            color: #fff;
+            text-align: center;
+            word-spacing: 5px;
+          }
+
+          .joim {
+            margin-top: 25px;
+            font-size: 18px;
+            padding: 10px 43px;
+            background-color: #F29947;
+            color: #fff;
+            border-radius: 40px;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .feature {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 80px;
+
+      .featureTitle {
+        font-size: 40px;
+        font-weight: 500;
+        color: #371841;
+        text-align: center;
+      }
+
+      .firstCont {
+        display: flex;
+        padding: 100px 0;
+        .firstImg {
+          width: 100%;
+
+          > img {
+            width: 600px;
+            height: 600px;
+          }
+        }
+
+        .firstContent {
+          width: 80%;
+          padding-top: 70px;
+          padding-right: 50px;
+          padding-left: 50px;
+          .circle {
+            width: 85px;
+            height: 85px;
+            background-color: #36E29A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+
+          .plan {
+            font-size: 25px;
+            font-weight: 500;
+            color: #36E29A;
+            margin-top: 30px;
+          }
+
+          .planCont {
+            font-size: 20px;
+            font-weight: 400;
+            word-spacing: 5px;
+            line-height: 2;
+            margin-top: 30px;
+            color: #371841;
+          }
+        }
+      }
+
+      .secondCont {
+        display: flex;
+        padding: 100px 0;
+
+        .secondContent {
+          width: 80%;
+          padding-top: 100px;
+          padding-right: 50px;
+          padding-left: 50px;
+          .circle {
+            width: 85px;
+            height: 85px;
+            background-color: #36E29A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+
+          .manage {
+            font-size: 25px;
+            font-weight: 500;
+            color: #36E29A;
+            margin-top: 30px;
+          }
+
+          .manageCont {
+            font-size: 20px;
+            font-weight: 400;
+            word-spacing: 5px;
+            line-height: 2;
+            margin-top: 30px;
+            color: #371841;
+          }
+        }
+
+        .secondImg {
+          width: 100%;
+
+          > img {
+            width: 600px;
+            height: 600px;
+          }
+        }
+      }
+
+      .thirdCont {
+        display: flex;
+        padding: 100px 0;
+        .thirdImg {
+          width: 100%;
+
+          > img {
+            width: 600px;
+            height: 600px;
+          }
+        }
+
+        .thirdContent {
+          width: 80%;
+          padding-top: 100px;
+          padding-right: 50px;
+          padding-left: 50px;
+          .circle {
+            width: 85px;
+            height: 85px;
+            background-color: #36E29A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+
+          .track {
+            font-size: 25px;
+            font-weight: 500;
+            color: #36E29A;
+            margin-top: 30px;
+          }
+
+          .trackCont {
+            font-size: 20px;
+            font-weight: 400;
+            word-spacing: 5px;
+            line-height: 2;
+            margin-top: 30px;
+            color: #371841;
+          }
+        }
+      }
+    }
+  }
+}
