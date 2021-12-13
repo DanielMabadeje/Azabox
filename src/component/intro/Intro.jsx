@@ -22,6 +22,7 @@ export default function Intro() {
           </div>
         </form>
       </div>
+      
       <div className="right">
         <img src={frame} alt="" />
       </div>

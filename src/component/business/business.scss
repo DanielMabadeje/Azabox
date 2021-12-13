@@ -24,12 +24,19 @@
       color: #36e29a;
       width: 18%;
 
+      @include responsive(large) {
+        width: 150%;
+      }
       @include responsive(small) {
         font-size: 25px;
         line-height: 1;
-        width: 50%;
+        width: 20%;
         height: 30px;
         margin-bottom: 10px;
+      }
+
+      @include responsive(sm) {
+        width: 40%;
       }
 
       > span {
@@ -50,10 +57,27 @@
       justify-content: center;
       background-color: #fff;
 
-      @include responsive(small) {
+      @include responsive(large) {
         width: 90%;
         height: 50px;
-        margin-left: 10px;
+        margin-left: 0;
+        margin-right: 100px;
+      }
+
+      @include responsive(lg) {
+        width: 200%;
+      }
+
+      @include responsive(small) {
+        width: 50%;
+        height: 50px;
+        margin-left: 60px;
+      }
+
+      @include responsive(sm) {
+        justify-content: center;
+        margin-left: 100px;
+        width: 80%;
       }
 
       .individual {
@@ -189,10 +213,16 @@
 
         @include responsive(small) {
           padding: 30px 15px;
+        }
+        @include responsive(sm) {
           flex-direction: column;
         }
         .firstImg {
           width: 100%;
+
+          @include responsive(lg) {
+            width: 70%;
+          }
 
           @include responsive(small) {
             width: 50%;
@@ -202,6 +232,15 @@
           > img {
             width: 600px;
             height: 600px;
+
+            @include responsive(large) {
+              width: 400px;
+              height: 400px;
+            }
+            @include responsive(lg) {
+              width: 300px;
+              height: 300px;
+            }
 
             @include responsive(small) {
               width: 250px;
@@ -281,6 +320,8 @@
 
         @include responsive(small) {
           padding: 30px 15px;
+        }
+        @include responsive(sm) {
           flex-direction: column;
         }
 
@@ -351,6 +392,10 @@
         .secondImg {
           width: 100%;
 
+          @include responsive(lg) {
+            width: 80%;
+          }
+
           @include responsive(small) {
             width: 50%;
             margin-top: 30px;
@@ -360,6 +405,16 @@
           > img {
             width: 600px;
             height: 600px;
+
+            @include responsive(large) {
+              width: 400px;
+              height: 400px;
+            }
+
+            @include responsive(lg) {
+              width: 300px;
+              height: 300px;
+            }
 
             @include responsive(small) {
               height: 250px;
@@ -374,11 +429,17 @@
         padding: 100px 0;
 
         @include responsive(small) {
-          flex-direction: column;
           padding: 30px 15px;
+        }
+        @include responsive(sm) {
+          flex-direction: column;
         }
         .thirdImg {
           width: 100%;
+
+          @include responsive(lg) {
+            width: 80%;
+          }
 
           @include responsive(small) {
             width: 50%;
@@ -388,6 +449,16 @@
           > img {
             width: 600px;
             height: 600px;
+
+            @include responsive(large) {
+              width: 400px;
+              height: 400px;
+            }
+
+            @include responsive(lg) {
+              height: 300px;
+              width: 300px;
+            }
 
             @include responsive(small) {
               width: 250px;
@@ -488,14 +559,10 @@
           align-items: center;
           padding: 70px 0;
 
-          @include responsive(small) {
-            padding: 20px 0;
-          }
-
           .contentTitle {
             font-size: 30px;
             font-weight: 500;
-            color: #36e29a;
+            color: #f29947;
             top: 50px;
 
             @include responsive(small) {
@@ -511,6 +578,11 @@
             font-size: 25px;
             font-weight: 400;
             color: #fff;
+
+            @include responsive(lg){
+              width: 85%;
+              text-align: center;
+            }
 
             @include responsive(small) {
               font-size: 15px;
@@ -529,6 +601,12 @@
             text-align: center;
             line-height: 2;
 
+            @include responsive(lg){
+              width: 80%;
+              font-weight: 200;
+              text-align: center;
+            }
+
             @include responsive(small) {
               width: 90%;
               font-size: 12px;
@@ -540,7 +618,7 @@
             margin-top: 25px;
             font-size: 18px;
             padding: 10px 43px;
-            background-color: #36e29a;
+            background-color: #f29947;
             color: #371841;
             border-radius: 40px;
             border: none;
@@ -580,10 +658,16 @@
 
         @include responsive(small) {
           padding: 30px 15px;
+        }
+        @include responsive(sm) {
           flex-direction: column;
         }
         .firstImg {
           width: 100%;
+
+          @include responsive(lg) {
+            width: 70%;
+          }
 
           @include responsive(small) {
             width: 50%;
@@ -593,6 +677,15 @@
           > img {
             width: 600px;
             height: 600px;
+
+            @include responsive(large) {
+              width: 400px;
+              height: 400px;
+            }
+            @include responsive(lg) {
+              width: 300px;
+              height: 300px;
+            }
 
             @include responsive(small) {
               width: 250px;
@@ -614,7 +707,7 @@
           .circle {
             width: 85px;
             height: 85px;
-            background-color: #f29947;
+            background-color: #36e29a;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -639,7 +732,7 @@
           .plan {
             font-size: 25px;
             font-weight: 500;
-            color: #f29947;
+            color: #36e29a;
             margin-top: 30px;
 
             @include responsive(small) {
@@ -672,6 +765,8 @@
 
         @include responsive(small) {
           padding: 30px 15px;
+        }
+        @include responsive(sm) {
           flex-direction: column;
         }
 
@@ -688,7 +783,7 @@
           .circle {
             width: 85px;
             height: 85px;
-            background-color: #f29947;
+            background-color: #36e29a;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -713,7 +808,7 @@
           .manage {
             font-size: 25px;
             font-weight: 500;
-            color: #f29947;
+            color: #36e29a;
             margin-top: 30px;
 
             @include responsive(small) {
@@ -742,6 +837,10 @@
         .secondImg {
           width: 100%;
 
+          @include responsive(lg) {
+            width: 80%;
+          }
+
           @include responsive(small) {
             width: 50%;
             margin-top: 30px;
@@ -751,6 +850,16 @@
           > img {
             width: 600px;
             height: 600px;
+
+            @include responsive(large) {
+              width: 400px;
+              height: 400px;
+            }
+
+            @include responsive(lg) {
+              height: 300px;
+              width: 300px;
+            }
 
             @include responsive(small) {
               height: 250px;
@@ -765,11 +874,17 @@
         padding: 100px 0;
 
         @include responsive(small) {
-          flex-direction: column;
           padding: 30px 15px;
+        }
+        @include responsive(sm) {
+          flex-direction: column;
         }
         .thirdImg {
           width: 100%;
+
+          @include responsive(lg) {
+            width: 80%;
+          }
 
           @include responsive(small) {
             width: 50%;
@@ -779,6 +894,15 @@
           > img {
             width: 600px;
             height: 600px;
+
+            @include responsive(large) {
+              width: 400px;
+              height: 400px;
+            }
+            @include responsive(lg) {
+              width: 300px;
+              height: 300px;
+            }
 
             @include responsive(small) {
               width: 250px;
@@ -800,7 +924,7 @@
           .circle {
             width: 85px;
             height: 85px;
-            background-color: #f29947;
+            background-color: #36e29a;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -825,7 +949,7 @@
           .track {
             font-size: 25px;
             font-weight: 500;
-            color: #f29947;
+            color: #36e29a;
             margin-top: 30px;
 
             @include responsive(small) {

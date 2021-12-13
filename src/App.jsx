@@ -7,12 +7,14 @@ import Business from "./component/business/Business";
 import Bottom from "./component/bottom/Bottom";
 
 import { BrowserRouter as Router } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="app">
       <Router>
-        <Topbar />
+        <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div className="section">
           <div className="intro">
             <Intro />
