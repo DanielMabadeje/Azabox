@@ -41,14 +41,14 @@ export default function Bottom() {
 
       <div className="footer">
         <div className="logo">
-          <img src={logo} alt="" />
+          <a href="#intro"><img src={logo} alt="" /></a>
           <div className="text">(c) 2021 Azabox finance</div>
         </div>
         <div className="social">
-          <img src={tw} alt="" />
-          <img src={ln} alt="" />
-          <img src={fb} alt="" />
-          <img src={ig} alt="" />
+          <img src={tw} alt="" className="tw" />
+          <img src={ln} alt="" className="ln" />
+          <img src={fb} alt="" className="fb" />
+          <img src={ig} alt="" className="ig" />
         </div>
       </div>
     </div>

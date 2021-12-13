@@ -6,12 +6,27 @@ export default function Topbar() {
     <div className="topbar">
       <div className="wrapper">
         <div className="logo">
-          <a href="#intro"><img src={logo} alt="" /></a>
+          <a href="#intro">
+            <img src={logo} alt="" />
+          </a>
         </div>
         <div className="bar">
-          <a href="#about" className="barLink">About Us</a>
-          <a href="#business" className="barLink">For Business</a>
-          <a href="#contact" className="barLink">Contact Us</a>
+          <div className="barCont">
+            <a href="#about" className="barLink">
+              About Us
+            </a>
+          </div>
+          <div className="barCont">
+            <a href="#business" className="barLink">
+              For Business
+            </a>
+          </div>
+          <div className="barCont">
+            <a href="#contact" className="barLink">
+              Contact Us
+            </a>
+          </div>
+
           <button className="join">Join Waitlist</button>
         </div>
       </div>

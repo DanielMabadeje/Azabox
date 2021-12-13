@@ -1,6 +1,12 @@
+@import "../../global.scss";
+
 .intro{
-    background-color: #fff;
+    background-color: #E5E5E5;
     display: flex;
+
+    @include responsive(small){
+        flex-direction: column;
+    }
     
     .left{
         display: flex;
@@ -9,11 +15,22 @@
         padding-right: 40px;
         width: 55%;
         height: inherit;
+        overflow: hidden;
+
+        @include responsive(small){
+            padding: 50px 30px;
+            width: 100%;
+        }
 
         .top{
             font-size: 20px;
             color: #F29947;
             font-weight: 400;
+
+            @include responsive(small){
+                height: inherit;
+                font-size: 15px;
+            }
         }
 
         .upperMid{
@@ -23,6 +40,14 @@
             font-weight: 600;
             line-height: 1.2;
             color: #371841;
+            overflow: hidden;
+            
+            @include responsive(small){
+                top: -90px;
+                overflow: visible;
+                font-size: 40px;
+                padding-right: 5px;
+            }
 
             >span{
                 color: #18A489;
@@ -35,16 +60,31 @@
             font-size: 18px;
             font-weight: 500;
             color: #18A489;
+
+            @include responsive(small){
+                top: -75px;
+                font-size: 13px;
+                overflow: visible;
+            }
         }
 
         .list{
             position: relative;
             top: 70px;
+
+            @include responsive(small){
+                top: -65px;
+                overflow: visible;
+            }
             .label{
                 margin-top: 10px;
                 font-size: 15px;
                 font-weight: 400;
                 color: #371841;
+
+                @include responsive(small){
+                    font-size: 10px;
+                }
             }
 
             .email{
@@ -57,14 +97,27 @@
                 align-items: center;
                 padding-left: 30px;
                 padding-right: 3px;
+                background-color: #fff;
+                ::placeholder{
+                    color: #404040;
+                }
+
+                @include responsive(small){
+                    padding-left: 20px;
+                }
 
                 > input{
                     border: none;
                     width: 70%;
+                    background-color: transparent;
+                    font-size: 14px;
+
+                    @include responsive(small){
+                        font-size: 10px;
+                    }
                 }
                 > input:focus{
                     outline: none;
-                    color: #371841;
                 }
 
                 .join{
@@ -72,7 +125,13 @@
                     height: 40px;
                     border: none;
                     border-radius: 40px;
-                    background-color: #36E29A;
+                    background-color: #042E45;
+                    color: #18A489;
+                    transition: all 1s ease;
+
+                    &:hover{
+                        transform: scale(1.1);
+                    }
 
                 }
             }
@@ -83,5 +142,11 @@
         height: 450px;
         position: absolute;
         bottom: 0;
+
+        @include responsive(small){
+            height: 100px;
+            bottom: 0;
+            right: 0;
+        }
     }
 }

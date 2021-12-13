@@ -4,7 +4,6 @@
   .section {
     width: 100%;
     height: calc(100vh - 90px);
-    background-color: aliceblue;
     position: relative;
     top: 90px;
     scroll-snap-type: y mandatory;
@@ -13,29 +12,25 @@
       display: none;
     }
 
-    > *{
-        scroll-snap-align: start;
-    }
+    > * {
+      scroll-snap-align: start;
 
-    .intro{
-      width: 100vw;
-      height: calc(100vh - 90px);
-      
-
-      .abt{
+      .intro {
         width: 100vw;
-          height: calc(50vh - 90px);
+        height: calc(100vh - 90px);
       }
-
-      .bus{
-          width: 100vw;
+      .abt {
+        width: 100vw;
+        height: calc(50vh - 90px);
+      }
+      .bus {
+        width: 100vw;
         //   height: calc(150vh - 90px);
       }
-
-      .bot{
+      .bot {
         width: 100vw;
         height: calc(40vh - 90px);
-    }
+      }
     }
   }
 }

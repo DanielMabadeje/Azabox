@@ -1,0 +1,14 @@
+
+
+@mixin responsive($breakpoint) {
+//   @if ($breakpoint == medium) {
+//     @media (max-width: 767px) {
+//       @content;
+//     }
+//   }
+  @if ($breakpoint == small) {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+}

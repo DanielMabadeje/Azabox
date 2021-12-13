@@ -1,44 +1,59 @@
-.topbar{
-    height: 90px;
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    overflow: hidden;
-    box-shadow: 2px 5px 15px -8px rgba(0,0,0,0.55);
-    -webkit-box-shadow: 2px 5px 15px -8px rgba(0,0,0,0.55);
-    -moz-box-shadow: 2px 5px 15px -8px rgba(0,0,0,0.55);
+.topbar {
+  height: 90px;
+  width: 100%;
+  background-color: #e5e5e5;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  overflow: hidden;
+  box-shadow: 2px 5px 15px -8px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 2px 5px 15px -8px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 2px 5px 15px -8px rgba(0, 0, 0, 0.55);
 
-    .wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 23px 80px;
-        
-        .logo > img{
-            height: 45px;
-            width: 120px;
-            cursor: pointer;
-        }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px 80px;
 
-        .bar{
-            .barLink{
-                margin-left: 20px;
-                text-decoration: none;
-                font-size: 16px;
-                color: #36E29A;
-                font-weight: 300;
-            }
-
-            .join{
-                background-color: #042E45;
-                width: 180px;
-                height: 50px;
-                border: none;
-                border-radius: 30px;
-                color: #36E29A;
-                margin-left: 50px;
-            }
-        }
+    .logo > img {
+      height: 45px;
+      width: 120px;
+      cursor: pointer;
     }
+
+    .bar {
+      overflow: hidden;
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
+      .barCont {
+        transition: all 1s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+        .barLink {
+          margin-left: 25px;
+          text-decoration: none;
+          font-size: 16px;
+          color: #36e29a;
+          font-weight: 300;
+        }
+      }
+
+      .join {
+        background-color: #042e45;
+        width: 180px;
+        height: 50px;
+        border: none;
+        border-radius: 30px;
+        color: #36e29a;
+        margin-left: 50px;
+        transition: all 1s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
 }

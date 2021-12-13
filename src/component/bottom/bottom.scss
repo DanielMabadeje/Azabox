@@ -1,130 +1,226 @@
+@import "../../global.scss";
+
 .bottom {
   display: flex;
   flex-direction: column;
   background-color: #042e45;
   padding: 60px 80px;
 
-  .bottomCont{
+  @include responsive(small){
+    padding: 20px 30px;
+  }
+
+  .bottomCont {
     display: flex;
     padding-bottom: 30px;
+
+    @include responsive(small){
+      flex-direction: column;
+    }
     .left {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    
-        .waiting {
-          .title {
-            font-size: 30px;
-            font-weight: 500;
-            color: #36e29a;
-          }
-    
-          .input {
-            margin-top: 20px;
-            width: 80%;
-            background-color: #042639;
-            height: 50px;
-            border-radius: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 10px;
-            padding-right: 2px;
-    
-            > input {
-              background-color: transparent;
-              color: #269969;
-              width: 80%;
-              border: none;
-    
-              &:focus {
-                outline: none;
-              }
-            }
-    
-            .join {
-              height: 45px;
-              width: 20%;
-              border-radius: 40px;
-              border: none;
-              background-color: #042e45;
-              color: #36e29a;
-            }
-          }
-        }
-      }
-    
-      .right {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-    
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .waiting {
         .title {
-          font-size: 20px;
+          font-size: 30px;
           font-weight: 500;
           color: #36e29a;
+
+          @include responsive(small){
+            font-size: 20px;
+            font-weight: 300;
+          }
         }
-    
-        .container {
+
+        .input {
+          margin-top: 20px;
+          width: 80%;
+          background-color: #042639;
+          height: 50px;
+          border-radius: 40px;
           display: flex;
-          justify-content: space-evenly;
-          margin-left: -15px;
-          margin-top: 30px;
-    
-          .appContainer {
-            width: 150px;
-            height: 60px;
-            background-color: #042639;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 40px;
-            color: #36E29A;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 10px;
+          padding-right: 2px;
+          ::placeholder{
+            color: #269969;
+          }
+
+          @include responsive(small){
+            width: 100%;
+            margin-top: 5px;
+            height: 35px;
+          }
+
+          > input {
+            background-color: transparent;
+            color: #269969;
+            width: 80%;
+            border: none;
+
+            @include responsive(small){
+              font-size: 12px;
+            }
             
-            >img{
-                width: 25px;
-                height: 25px;
-                margin-right: 10px;
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .join {
+            height: 45px;
+            width: 20%;
+            border-radius: 40px;
+            border: none;
+            background-color: #042e45;
+            color: #36e29a;
+            overflow: hidden;
+            transition: all 1s ease;
+            &:hover{
+              transform: scale(1.1);
+            }
+
+            @include responsive(small){
+              height: 30px;
+              width: 30%;
             }
           }
         }
       }
-    
+    }
 
-  }
-
-  
-  .hor{
-      background-color: white;
-  }
-
-  .footer{
+    .right {
+      width: 50%;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
 
-      .logo{
+      @include responsive(small){
+        width: 100%;
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: 500;
+        color: #36e29a;
+
+        @include responsive(small){
+          font-size: 20px;
+          font-weight: 300;
+          margin-top: 35px;
+          width: 100%;
+        }
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: -15px;
+        margin-top: 30px;
+        cursor: pointer;
+        overflow: hidden;
+
+        .appContainer {
+          width: 150px;
+          height: 60px;
+          background-color: #042639;
           display: flex;
           align-items: center;
-
-          .text{
-            color: #FFFFFF;
-            margin-left: 15px;
-            font-size: 12px;
-            font-weight: 300;
+          justify-content: center;
+          border-radius: 40px;
+          color: #36e29a;
+          transition: all 1s ease;
+          &:hover {
+            transform: scale(1.1);
+            overflow: hidden;
           }
+
+          @include responsive(small){
+            height: 40px;
+            width: 120px;
+            padding: 0 5px;
+          }
+
+          > img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+
+            @include responsive(small){
+              width: 18px;
+              height: 18px;
+            }
+          }
+
+          .content{
+            @include responsive(small){
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hor {
+    background-color: white;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive(small){
+      flex-direction: column;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      .text {
+        color: #ffffff;
+        margin-left: 15px;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+
+    .social {
+      display: flex;
+      width: 15%;
+      justify-content: space-between;
+
+      @include responsive(small){
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 15px;
+        padding-bottom: 10px;
       }
 
-      .social{
-          display: flex;
-          width: 15%;
-          justify-content: space-between;
-          
-          >img{
-              cursor: pointer;
-              height: 12px;
-              width: 12px;
-          }
+      .tw {
+        cursor: pointer;
+        height: 15.29px;
+        width: 12.43px;
       }
+      .ln {
+        cursor: pointer;
+        width: 14.3px;
+        height: 13.5px;
+      }
+      .fb {
+        cursor: pointer;
+        width: 7.88px;
+        height: 15px;
+      }
+      .ig {
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+      }
+    }
   }
 }

@@ -113,13 +113,13 @@ export default function Business() {
                 Manage Your Business Finances Like An Expert
               </div>
               <div className="grow">
-                Grow your business with our effective tool for fianancial
+                Grow your business with our effective tool for financial
                 management
               </div>
               <div className="expenses">
                 With Azabox you can manage your inventory, financial records,
                 budget and track your expenses <br /> as well as schedule
-                payment. Take your business to the next level, take Control of
+                payment. Take your business to the next level, take control of
                 your finances.
               </div>
               <button className="joim">Join the waiting list</button>
@@ -180,7 +180,7 @@ export default function Business() {
               <div className="track">Track the needful</div>
               <div className="trackCont">
                 All business expenses will be sorted for taxes as you spend, so
-                that way, you don't have to worry about them later.Track what
+                that way, you don't have to worry about them later. Track what
                 your business is spending on.
               </div>
             </div>
