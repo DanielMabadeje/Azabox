@@ -4,6 +4,10 @@
   background-color: #e5e5e5;
   display: flex;
 
+  @include responsive(desk){
+    height: 33vh;
+    overflow: hidden;
+  }
   @include responsive(small) {
     flex-direction: column;
   }
@@ -155,6 +159,11 @@
       height: 450px;
       position: absolute;
       bottom: 0;
+
+      @include responsive(desk){
+        top: 125px;
+      }
+      
 
       @include responsive(small) {
         height: 200px;

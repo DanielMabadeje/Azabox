@@ -140,7 +140,6 @@
     width: 60%;
     height: 100vh;
     position: fixed;
-    transition: all 1s ease;
 
     .menuContainer {
       padding-top: 20%;
@@ -165,9 +164,12 @@
         }
       }
 
-      .join {
-        position: relative;
-        left: 40px;
+      .button{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .join {
         background-color: #042e45;
         width: 180px;
         height: 50px;
@@ -180,6 +182,8 @@
           transform: scale(1.1);
         }
       }
+      }
+      
     }
 
     &.active {

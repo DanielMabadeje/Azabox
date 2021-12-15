@@ -1,15 +1,17 @@
 import "./topbar.scss";
 import logo from "./assets/logo.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-export default function Topbar({ menuOpen, setMenuOpen }) {
+export default function AboutTopbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className={"topbar " + (menuOpen && "active")}>
       <div className="wrapper">
         <div className="logo">
-          <a href="#intro">
+          <Link to="/">
             <img src={logo} alt="" />
-          </a>
+          </Link>
         </div>
         <div className="bar">
           <div className="barLeft">
@@ -19,9 +21,9 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
               </Link>
             </div>
             <div className="barCont">
-              <a href="#business" className="barLink">
+              <Link to="#business" className="barLink">
                 For Business
-              </a>
+              </Link>
             </div>
             <div className="barCont">
               <a href="#contact" className="barLink">
@@ -50,9 +52,9 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
             </Link>
           </div>
           <div className="menuCont">
-            <a href="#business" className="menuLink" onClick={()=> setMenuOpen(!menuOpen)}>
+            <Link to="/" className="menuLink" onClick={()=> setMenuOpen(!menuOpen)}>
               For Business
-            </a>
+            </Link>
           </div>
           <div className="menuCont">
             <a href="#contact" className="menuLink" onClick={()=> setMenuOpen(!menuOpen)}>

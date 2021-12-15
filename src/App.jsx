@@ -5,8 +5,9 @@ import Intro from "./component/intro/Intro";
 import About from "./component/about/About";
 import Business from "./component/business/Business";
 import Bottom from "./component/bottom/Bottom";
+import AboutUs from "./component/aboutUS/AboutUs";
 
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
@@ -15,23 +16,28 @@ function App() {
     <div className="app">
       <Router>
         <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <div className="section">
-          <div className="intro">
-            <Intro />
-          </div>
+        <Switch>
+          <Route exact path="/">
+            <div className="section">
+              <div className="intro">
+                <Intro />
+              </div>
 
-          <div className="abt">
-            <About />
-          </div>
+              <div className="abt">
+                <About />
+              </div>
 
-          <div className="bus">
-            <Business />
-          </div>
+              <div className="bus">
+                <Business />
+              </div>
 
-          <div className="bot">
-            <Bottom />
-          </div>
-        </div>
+              <div className="bot">
+                <Bottom />
+              </div>
+            </div>
+          </Route>
+          <Route path="/about"><div className="aboutUs"> <AboutUs /> </div></Route>
+        </Switch>
       </Router>
     </div>
   );

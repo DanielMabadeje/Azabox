@@ -25,12 +25,22 @@
       }
       .bus {
         width: 100vw;
-        //   height: calc(150vh - 90px);
       }
       .bot {
         width: 100vw;
         height: calc(40vh - 90px);
       }
+    }
+  }
+
+  .aboutUs{
+    width: 100%;
+    height: calc(100vh);
+    position: relative;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 }
