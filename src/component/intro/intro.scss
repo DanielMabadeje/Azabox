@@ -4,9 +4,8 @@
   background-color: #e5e5e5;
   display: flex;
 
-  @include responsive(desk){
-    height: 33vh;
-    overflow: hidden;
+  @include responsive(large){
+    height: inherit;
   }
   @include responsive(small) {
     flex-direction: column;
@@ -22,7 +21,7 @@
     overflow: hidden;
 
     @include responsive(small) {
-      padding: 50px 30px;
+      padding: 50px 25px;
       width: 100%;
     }
 
@@ -49,8 +48,7 @@
       @include responsive(small) {
         position: absolute;
         top: 80px;
-        overflow: visible;
-        font-size: 35px;
+        font-size: 30px;
         padding-right: 5px;
       }
 
@@ -67,15 +65,9 @@
       color: #18a489;
 
       @include responsive(small) {
-        position: absolute;
-        top: 180px;
         font-size: 13px;
-        overflow: visible;
-      }
-
-      @include responsive(sm) {
         position: absolute;
-        top: 270px;
+        margin-top: 150px;
       }
     }
 
@@ -85,13 +77,8 @@
 
       @include responsive(small) {
         position: absolute;
-        top: 200px;
+        margin-top: 160px;
         overflow: visible;
-      }
-
-      @include responsive(sm) {
-        position: absolute;
-        top: 290px;
       }
       .label {
         margin-top: 10px;
@@ -155,20 +142,23 @@
   }
 
   .right {
+    overflow: hidden;
+
+    @include responsive(small){
+      overflow: visible;
+    }
     > img {
       height: 450px;
-      position: absolute;
-      bottom: 0;
-
-      @include responsive(desk){
-        top: 125px;
-      }
+      position: relative;
+      top: 65px;
       
-
+      @include responsive(large){
+        margin-top: 160px;
+      }
       @include responsive(small) {
-        height: 200px;
-        bottom: 0;
-        right: 0;
+        height: 250px;
+        top: 0;
+        left: 140px;
       }
     }
   }

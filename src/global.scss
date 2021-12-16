@@ -1,15 +1,9 @@
 @mixin responsive($breakpoint) {
-  @if ($breakpoint == desk) {
-    @media (min-width: 981px) and (max-width: 1080px) {
-      @content;
-    }
-  }
   @if ($breakpoint == large) {
-    @media (max-width: 1024px) {
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
       @content;
     }
   }
-
   @if ($breakpoint == lg) {
     @media (max-width: 768px) {
       @content;
