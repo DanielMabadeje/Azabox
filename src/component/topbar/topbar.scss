@@ -171,6 +171,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        animation: buttonBlink 1s infinite;
 
         .join {
           background-color: #042e45;
@@ -184,6 +185,11 @@
           &:hover {
             transform: scale(1.1);
           }
+        }
+      }
+      @keyframes buttonBlink {
+        100%{
+          opacity: 0;
         }
       }
     }

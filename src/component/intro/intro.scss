@@ -63,11 +63,20 @@
       font-size: 18px;
       font-weight: 500;
       color: #18a489;
+      animation: blink 2s infinite;
 
       @include responsive(small) {
         font-size: 13px;
         position: absolute;
         margin-top: 150px;
+      }
+    }
+    @keyframes blink {
+      100%{
+        opacity: 0;
+      }
+      50%{
+        opacity: 2;
       }
     }
 
@@ -150,7 +159,7 @@
     > img {
       height: 450px;
       position: relative;
-      top: 65px;
+      top: 135px;
       
       @include responsive(large){
         margin-top: 160px;

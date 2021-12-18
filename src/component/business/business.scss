@@ -49,9 +49,9 @@
     }
 
     .container {
-      height: 50px;
+      height: 55px;
       width: 25%;
-      padding: 0;
+      padding: 3px;
       border-radius: 40px;
       border: 2px solid rgba(24, 164, 137, 0.2);
       margin-left: 25%;
@@ -82,8 +82,9 @@
 
       @include responsive(sm) {
         justify-content: center;
-        margin-left: 100px;
+        margin-left: 40px;
         width: 80%;
+        height: 55px;
       }
 
       .individual {

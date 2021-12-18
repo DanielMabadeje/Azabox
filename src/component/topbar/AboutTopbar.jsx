@@ -21,7 +21,7 @@ export default function AboutTopbar() {
               </Link>
             </div>
             <div className="barCont">
-              <Link to="#business" className="barLink">
+              <Link to="/" className="barLink">
                 For Business
               </Link>
             </div>
