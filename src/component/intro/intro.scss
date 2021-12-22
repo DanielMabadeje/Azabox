@@ -155,7 +155,7 @@
     overflow: hidden;
 
     @include responsive(small){
-      overflow: hidden;
+      overflow: visible;
     }
     > img {
       height: 450px;
