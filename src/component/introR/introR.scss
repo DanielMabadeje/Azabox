@@ -11,6 +11,8 @@
       display: block;
       flex-direction: column;
       height: 50%;
+      z-index: -99;
+      overflow: hidden;
     }
 
     .right {
