@@ -12,7 +12,7 @@ export default function Intro() {
           <span>finances</span> better
         </div>
         <div className="mid">Be The First To Know We Launch</div>
-        <form action="" className="list">
+        {/* <form action="" className="list">
           <label htmlFor="email" className="label">
             Join the waiting list
           </label>
@@ -20,7 +20,7 @@ export default function Intro() {
             <input type="email" placeholder="Enter your email address" />
             <button className="join">Join now</button>
           </div>
-        </form>
+        </form> */}
       </div>
       
       <div className="right">
