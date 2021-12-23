@@ -2,7 +2,6 @@
 
 .intro {
   background-color: #e5e5e5;
-  overflow: hidden;
   display: flex;
 
   @include responsive(large){
@@ -10,7 +9,6 @@
   }
   @include responsive(small) {
     flex-direction: column;
-    height: 50%;
   }
 
   .left {
@@ -20,6 +18,8 @@
     padding: 60px 80px;
     height: inherit;
     overflow: hidden;
+    z-index: 2;
+    background-color: #e5e5e5;
 
     @include responsive(small) {
       padding: 50px 25px;
@@ -156,7 +156,7 @@
     flex: 1.5;
 
     @include responsive(small){
-      display: none;
+      overflow: hidden;
     }
     > img {
       height: 450px;
