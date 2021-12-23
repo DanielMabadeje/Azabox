@@ -4,6 +4,7 @@
   background-color: #e5e5e5;
   overflow: hidden;
   display: flex;
+  z-index: 1;
 
   @include responsive(large){
     height: inherit;
