@@ -6,6 +6,7 @@ import About from "./component/about/About";
 import Business from "./component/business/Business";
 import Bottom from "./component/bottom/Bottom";
 import AboutUs from "./component/aboutUS/AboutUs";
+import IntroR from "./component/introR/IntroR";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
@@ -21,6 +22,9 @@ function App() {
             <div className="section">
               <div className="intro">
                 <Intro />
+              </div>
+              <div className="introR">
+                <IntroR />
               </div>
 
               <div className="abt">

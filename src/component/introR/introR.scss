@@ -1,0 +1,38 @@
+@import "../../global.scss";
+
+.introR {
+    background-color: #e5e5e5;
+    display: none;
+  
+    @include responsive(large){
+      height: inherit;
+    }
+    @include responsive(small) {
+      display: block;
+      flex-direction: column;
+      height: 50%;
+    }
+
+    .right {
+      flex: 1.5;
+  
+      @include responsive(small){
+        overflow: hidden;
+        display: block;
+      }
+      > img {
+        height: 450px;
+        position: absolute;
+        bottom: 0;
+        
+        @include responsive(large){
+          margin-top: 160px;
+        }
+        @include responsive(small) {
+          height: 250px;
+          bottom: 0;
+          left: 140px;
+        }
+      }
+    }
+}
