@@ -1,9 +1,4 @@
 import "./intro.scss";
-
-import rectangle from "./assets/rectangle.png";
-import unsplash from "./assets/unsplash.png";
-import unsplash1 from "./assets/unsplash1.png";
-import unsplash2 from "./assets/unsplash2.png";
 import frame2 from "./assets/Frame2.png";
 import Success from "../success/Success";
 
