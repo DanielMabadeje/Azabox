@@ -1,0 +1,60 @@
+@import "../../global.scss";
+
+.success {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+
+  .container {
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    border-radius: 10px;
+    @include responsive(sm) {
+      padding: 30px 40px;
+      width: 80%;
+      height: 30%;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 500;
+      color: #042e45;
+      text-align: center;
+      @include responsive(sm) {
+        width: 100%;
+        font-size: 25px;
+      }
+    }
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      color: #042e45;
+      text-align: center;
+      @include responsive(sm) {
+        font-size: 15px;
+        overflow: hidden;
+      }
+    }
+    button {
+      border: none;
+      border-radius: 40px;
+      padding: 20px 40px;
+      font-size: 14px;
+      font-weight: 400;
+      background-color: #18a489;
+      color: white;
+      @include responsive(sm) {
+        padding: 10px 20px;
+      }
+    }
+  }
+}

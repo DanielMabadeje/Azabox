@@ -24,7 +24,7 @@
       color: #36e29a;
       width: 18%;
 
-      @include responsive(desk){
+      @include responsive(desk) {
         width: 30%;
       }
       @include responsive(large) {
@@ -60,7 +60,7 @@
       justify-content: center;
       background-color: #fff;
 
-      @include responsive(desk){
+      @include responsive(desk) {
         width: 40%;
       }
       @include responsive(large) {
@@ -115,6 +115,8 @@
   }
 
   .individualSection {
+    transition: all 1s ease;
+    position: relative;
     .mid {
       width: 100%;
       height: 400px;
@@ -185,9 +187,7 @@
             border-radius: 40px;
             border: none;
             transition: all 1s ease;
-            &:hover {
-              transform: scale(1.1);
-            }
+            text-decoration: none;
           }
         }
       }
@@ -226,13 +226,14 @@
         }
         .firstImg {
           width: 100%;
+          overflow: visible;
 
           @include responsive(lg) {
             width: 70%;
           }
 
-          @include responsive(small) {
-            width: 50%;
+          @include responsive(sm) {
+            width: 100%;
             overflow: visible;
           }
 
@@ -266,33 +267,10 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #f29947;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .tracking {
-            font-size: 25px;
+            width: 70%;
+            font-size: 40px;
             font-weight: 500;
             color: #f29947;
             margin-top: 30px;
@@ -301,6 +279,9 @@
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 105%;
             }
           }
 
@@ -318,6 +299,13 @@
               margin-top: 15px;
             }
           }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
+            }
+          }
         }
       }
 
@@ -333,7 +321,7 @@
         }
 
         .secondContent {
-          width: 100%;
+          flex: 0.5;
           padding-top: 50px;
           padding-right: 50px;
           padding-left: 50px;
@@ -342,33 +330,10 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #f29947;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .save {
-            font-size: 25px;
+            width: 50%;
+            font-size: 40px;
             font-weight: 500;
             color: #f29947;
             margin-top: 30px;
@@ -377,6 +342,9 @@
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 100%;
             }
           }
 
@@ -394,17 +362,28 @@
               margin-top: 15px;
             }
           }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
+            }
+          }
         }
 
         .secondImg {
-          width: 100%;
+          flex: 0.5;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: visible;
 
           @include responsive(lg) {
             width: 80%;
           }
 
-          @include responsive(small) {
-            width: 50%;
+          @include responsive(sm) {
+            width: 80%;
             margin-top: 30px;
             overflow: visible;
           }
@@ -443,13 +422,17 @@
         }
         .thirdImg {
           width: 100%;
+          overflow: visible;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           @include responsive(lg) {
             width: 80%;
           }
 
           @include responsive(small) {
-            width: 50%;
+            width: 100%;
             overflow: visible;
           }
 
@@ -484,33 +467,10 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #f29947;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .warren {
-            font-size: 25px;
+            width: 50%;
+            font-size: 40px;
             font-weight: 500;
             color: #f29947;
             margin-top: 30px;
@@ -519,6 +479,9 @@
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 100%;
             }
           }
 
@@ -536,12 +499,22 @@
               margin-top: 15px;
             }
           }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
+            }
+          }
         }
       }
     }
   }
 
   .businessSection {
+    transition: all 1s ease;
+    position: absolute;
+    top: 195%;
     .mid {
       width: 100%;
       height: 400px;
@@ -586,7 +559,7 @@
             font-weight: 400;
             color: #fff;
 
-            @include responsive(lg){
+            @include responsive(lg) {
               width: 85%;
               text-align: center;
             }
@@ -608,7 +581,7 @@
             text-align: center;
             line-height: 2;
 
-            @include responsive(lg){
+            @include responsive(lg) {
               width: 80%;
               font-weight: 200;
               text-align: center;
@@ -628,15 +601,13 @@
             font-size: 18px;
             padding: 10px 43px;
             background-color: #f29947;
-            color: #371841;
+            color: white;
             border-radius: 40px;
             border: none;
             transition: all 1s ease;
-            &:hover {
-              transform: scale(1.1);
-            }
+            text-decoration: none;
 
-            @include responsive(small){
+            @include responsive(small) {
               margin-top: 20px;
             }
           }
@@ -677,13 +648,17 @@
         }
         .firstImg {
           width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: visible;
 
           @include responsive(lg) {
             width: 70%;
           }
 
           @include responsive(small) {
-            width: 50%;
+            width: 100%;
             overflow: visible;
           }
 
@@ -717,41 +692,21 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #36e29a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .plan {
-            font-size: 25px;
+            width: 50%;
+            font-size: 40px;
             font-weight: 500;
-            color: #36e29a;
+            color: #18a489;
             margin-top: 30px;
 
             @include responsive(small) {
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 100%;
             }
           }
 
@@ -767,6 +722,13 @@
               font-weight: 300;
               font-size: 15px;
               margin-top: 15px;
+            }
+          }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
             }
           }
         }
@@ -793,41 +755,21 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #36e29a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .manage {
-            font-size: 25px;
+            width: 70%;
+            font-size: 40px;
             font-weight: 500;
-            color: #36e29a;
+            color: #18a489;
             margin-top: 30px;
 
             @include responsive(small) {
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 150%;
             }
           }
 
@@ -845,17 +787,28 @@
               margin-top: 15px;
             }
           }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
+            }
+          }
         }
 
         .secondImg {
           width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: visible;
 
           @include responsive(lg) {
             width: 80%;
           }
 
-          @include responsive(small) {
-            width: 50%;
+          @include responsive(sm) {
+            width: 100%;
             margin-top: 30px;
             overflow: visible;
           }
@@ -894,13 +847,17 @@
         }
         .thirdImg {
           width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: visible;
 
           @include responsive(lg) {
             width: 80%;
           }
 
           @include responsive(small) {
-            width: 50%;
+            width: 100%;
             overflow: visible;
           }
 
@@ -934,41 +891,21 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #36e29a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .track {
-            font-size: 25px;
+            width: 50%;
+            font-size: 40px;
             font-weight: 500;
-            color: #36e29a;
+            color: #18a489;
             margin-top: 30px;
 
             @include responsive(small) {
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 100%;
             }
           }
 
@@ -984,6 +921,13 @@
               font-weight: 300;
               font-size: 15px;
               margin-top: 15px;
+            }
+          }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
             }
           }
         }
