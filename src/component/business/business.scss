@@ -104,19 +104,20 @@
 
   .individualSection {
     transition: all 0.5s ease;
-    position: relative;
+    display: none;
     left: -3000px;
-    @include responsive(sm) {
-      left: -1000px;
-    }
-    @include responsive(lg) {
-      left: -1000px;
-    }
-    @include responsive(large) {
-      left: -1300px;
-    }
+    // @include responsive(sm) {
+    //   left: -1000px;
+    // }
+    // @include responsive(lg) {
+    //   left: -1000px;
+    // }
+    // @include responsive(large) {
+    //   left: -1300px;
+    // }
 
     &.active {
+      display: block;
       left: 0;
     }
     .mid {
@@ -524,24 +525,22 @@
 
   .businessSection {
     transition: all 0.5s ease;
-    position: relative;
-    margin-top: -228%;
-    right: -3000px;
-    @include responsive(large) {
-      margin-top: -271%;
-      right: -1300px;
-    }
-    @include responsive(sm) {
-      margin-top: -430% !important;
-      right: -1000px;
-    }
-    @include responsive(lg) {
-      margin-top: -437%;
-      right: -1000px;
-    }
+    display: none;
+    // @include responsive(large) {
+    //   margin-top: -271%;
+    //   right: -1300px;
+    // }
+    // @include responsive(sm) {
+    //   margin-top: -430% !important;
+    //   right: -1000px;
+    // }
+    // @include responsive(lg) {
+    //   margin-top: -437%;
+    //   right: -1000px;
+    // }
 
     &.active {
-      right: 0;
+      display: block;
     }
 
     .mid {
