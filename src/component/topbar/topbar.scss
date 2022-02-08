@@ -147,13 +147,20 @@
   }
 
   .menu {
-    background-color: transparent;
     width: 60%;
     height: 100vh;
     position: fixed;
     box-shadow: 2px 5px 15px -8px rgba(0, 0, 0, 0.55);
     -webkit-box-shadow: 2px 5px 15px -8px rgba(0, 0, 0, 0.55);
     -moz-box-shadow: 2px 5px 15px -8px rgba(0, 0, 0, 0.55);
+    left: -1000px;
+    transition: all 1s ease;
+    @include responsive(sm) {
+      left: -300px;
+    }
+    @include responsive(lg) {
+      left: -500px;
+    }
 
     .menuContainer {
       padding-top: 20%;
@@ -203,6 +210,7 @@
       transition: all 1s ease;
       background-color: #f29947;
       color: #e5e5e5;
+      left: 0;
     }
   }
 }

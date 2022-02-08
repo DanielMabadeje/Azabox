@@ -2,6 +2,7 @@
 
 .business {
   background-color: #e5e5e5;
+  overflow: hidden;
 
   .header {
     display: flex;
@@ -59,30 +60,23 @@
       align-items: center;
       justify-content: center;
       background-color: #fff;
+      overflow: hidden;
 
-      @include responsive(desk) {
-        width: 40%;
-      }
       @include responsive(large) {
-        width: 90%;
+        width: 100%;
         height: 50px;
         margin-left: 0;
-        margin-right: 100px;
+        margin-right: 200px;
       }
 
       @include responsive(lg) {
         width: 200%;
-      }
-
-      @include responsive(small) {
-        width: 50%;
-        height: 50px;
-        margin-left: 60px;
+        margin-right: 0;
       }
 
       @include responsive(sm) {
         justify-content: center;
-        margin-left: 40px;
+        margin-left: 90px;
         width: 80%;
         height: 55px;
       }
@@ -95,9 +89,6 @@
         background-color: #36e29a;
         color: #fff;
         transition: all 1s ease;
-        &:hover {
-          transform: scale(1.1);
-        }
       }
       .business {
         padding: 9px 5px;
@@ -107,16 +98,27 @@
         background-color: #fff;
         color: #371841;
         transition: all 1s ease;
-        &:hover {
-          transform: scale(1.1);
-        }
       }
     }
   }
 
   .individualSection {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     position: relative;
+    left: -3000px;
+    @include responsive(sm) {
+      left: -1000px;
+    }
+    @include responsive(lg) {
+      left: -1000px;
+    }
+    @include responsive(large) {
+      left: -1300px;
+    }
+
+    &.active {
+      left: 0;
+    }
     .mid {
       width: 100%;
       height: 400px;
@@ -224,6 +226,9 @@
         @include responsive(sm) {
           flex-direction: column;
         }
+        @include responsive(lg) {
+          flex-direction: column;
+        }
         .firstImg {
           width: 100%;
           overflow: visible;
@@ -281,7 +286,7 @@
               font-weight: 400;
             }
             @include responsive(lg) {
-              width: 105%;
+              width: 100%;
             }
           }
 
@@ -317,6 +322,9 @@
           padding: 30px 15px;
         }
         @include responsive(sm) {
+          flex-direction: column;
+        }
+        @include responsive(lg) {
           flex-direction: column;
         }
 
@@ -420,6 +428,9 @@
         @include responsive(sm) {
           flex-direction: column;
         }
+        @include responsive(lg) {
+          flex-direction: column;
+        }
         .thirdImg {
           width: 100%;
           overflow: visible;
@@ -512,9 +523,27 @@
   }
 
   .businessSection {
-    transition: all 1s ease;
-    position: absolute;
-    top: 195%;
+    transition: all 0.5s ease;
+    position: relative;
+    margin-top: -228%;
+    right: -3000px;
+    @include responsive(large) {
+      margin-top: -271%;
+      right: -1300px;
+    }
+    @include responsive(sm) {
+      margin-top: -430% !important;
+      right: -1000px;
+    }
+    @include responsive(lg) {
+      margin-top: -437%;
+      right: -1000px;
+    }
+
+    &.active {
+      right: 0;
+    }
+
     .mid {
       width: 100%;
       height: 400px;
@@ -646,6 +675,9 @@
         @include responsive(sm) {
           flex-direction: column;
         }
+        @include responsive(lg) {
+          flex-direction: column;
+        }
         .firstImg {
           width: 100%;
           display: flex;
@@ -708,6 +740,9 @@
             @include responsive(lg) {
               width: 100%;
             }
+            @include responsive(large) {
+              width: 80%;
+            }
           }
 
           .planCont {
@@ -742,6 +777,9 @@
           padding: 30px 15px;
         }
         @include responsive(sm) {
+          flex-direction: column;
+        }
+        @include responsive(lg) {
           flex-direction: column;
         }
 
@@ -843,6 +881,9 @@
           padding: 30px 15px;
         }
         @include responsive(sm) {
+          flex-direction: column;
+        }
+        @include responsive(lg) {
           flex-direction: column;
         }
         .thirdImg {

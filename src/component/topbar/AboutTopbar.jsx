@@ -43,18 +43,8 @@ export default function AboutTopbar() {
         <button className="join">Join Waitlist</button>
       </div>
 
-      <div
-        className={"menu " + (menuOpen && "active")}
-        style={
-          menuOpen
-            ? { visibility: "visible", transition: "all 1s ease" }
-            : { visibility: "hidden", transition: "all 1s ease" }
-        }
-      >
-        <div
-          className="menuContainer"
-          style={menuOpen ? { display: "block" } : { display: "none" }}
-        >
+      <div className={"menu " + (menuOpen && "active")}>
+        <div className="menuContainer">
           <div className="menuCont">
             <Link
               to="/about"

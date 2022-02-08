@@ -51,8 +51,9 @@ export default function Business() {
       </div>
 
       <div
-        className="individualSection"
-        style={individualSection ? { left: "0" } : { left: "-3000px" }}
+        className={
+          individualSection ? "individualSection active" : "individualSection"
+        }
       >
         <div className="mid">
           <div className="background">
@@ -132,8 +133,9 @@ export default function Business() {
       </div>
 
       <div
-        className="businessSection"
-        style={businessSection ? { right: "0" } : { right: "-3000px" }}
+        className={
+          businessSection ? "businessSection active" : "businessSection"
+        }
       >
         <div className="mid">
           <div className="background">
