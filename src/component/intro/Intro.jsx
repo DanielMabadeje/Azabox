@@ -37,7 +37,7 @@ export default function Intro({ success, setSuccess }) {
       </div>
 
       <div className="right">
-        <img src={frame2} alt="" />
+        <img src={frame2} alt="" className="rounded mx-auto d-block" />
       </div>
     </div>
   );
