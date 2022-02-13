@@ -3,26 +3,55 @@
 .intro {
   background-color: #e5e5e5;
   display: flex;
+  height: auto !important;
+  padding-bottom: 40px;
 
-  @include responsive(large){
+  @include responsive(large) {
     height: inherit;
   }
-  @include responsive(small) {
+  @include responsive(sm) {
     flex-direction: column;
+  }
+  @include responsive(lg) {
+    flex-direction: column;
+  }
+
+  .success {
+    display: none;
+  }
+  &.active {
+    .success {
+      display: block;
+      position: fixed;
+      top: 200px;
+      z-index: 3;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .left,
+    .right {
+      opacity: 0.2;
+    }
   }
 
   .left {
     display: flex;
+    flex: 0.5;
     flex-direction: column;
     padding: 60px 80px;
-    padding-right: 40px;
-    width: 55%;
     height: inherit;
     overflow: hidden;
+    z-index: 2;
+    background-color: #e5e5e5;
 
-    @include responsive(small) {
+    @include responsive(sm) {
       padding: 50px 25px;
       width: 100%;
+      flex: none;
+      height: 50vh;
+      background-color: #e5e5e5;
+      position: relative;
     }
 
     .top {
@@ -30,7 +59,7 @@
       color: #f29947;
       font-weight: 400;
 
-      @include responsive(small) {
+      @include responsive(sm) {
         height: inherit;
         font-size: 15px;
       }
@@ -38,14 +67,14 @@
 
     .upperMid {
       position: relative;
-      top: 30px;
+      top: 15px;
       font-size: 45px;
       font-weight: 600;
       line-height: 1.2;
       color: #371841;
       overflow: hidden;
 
-      @include responsive(small) {
+      @include responsive(sm) {
         position: absolute;
         top: 80px;
         font-size: 30px;
@@ -59,32 +88,23 @@
 
     .mid {
       position: relative;
-      top: 60px;
+      top: 45px;
       font-size: 18px;
       font-weight: 500;
-      color: #18a489;
-      animation: blink 2s infinite;
+      color: #042e45;
 
-      @include responsive(small) {
+      @include responsive(sm) {
         font-size: 13px;
         position: absolute;
         margin-top: 150px;
       }
     }
-    @keyframes blink {
-      100%{
-        opacity: 0;
-      }
-      50%{
-        opacity: 2;
-      }
-    }
 
     .list {
       position: relative;
-      top: 70px;
+      top: 55px;
 
-      @include responsive(small) {
+      @include responsive(sm) {
         position: absolute;
         margin-top: 160px;
         overflow: visible;
@@ -95,7 +115,7 @@
         font-weight: 400;
         color: #371841;
 
-        @include responsive(small) {
+        @include responsive(sm) {
           font-size: 10px;
         }
       }
@@ -115,7 +135,7 @@
           color: #404040;
         }
 
-        @include responsive(small) {
+        @include responsive(sm) {
           padding-left: 20px;
         }
 
@@ -151,23 +171,28 @@
   }
 
   .right {
-    overflow: hidden;
+    flex: 0.7;
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 
-    @include responsive(small){
-      overflow: visible;
-    }
-    > img {
-      height: 450px;
+    @include responsive(sm) {
+      overflow: hidden;
+      flex: none;
+      height: 60vh;
       position: relative;
-      top: 135px;
-      
-      @include responsive(large){
-        margin-top: 160px;
-      }
-      @include responsive(small) {
-        height: 250px;
-        top: 0;
-        left: 140px;
+      margin-top: 0;
+    }
+
+    img {
+      width: auto;
+      height: auto;
+      @include responsive(sm) {
+        height: auto;
+        width: auto;
       }
     }
   }

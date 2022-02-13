@@ -1,7 +1,9 @@
 import "./aboutUs.scss";
 import AboutTopbar from "../topbar/AboutTopbar";
 import Bottom from "../bottom/Bottom";
-import logo from "./assets/logo.png";
+import about from "./assets/about.png";
+import mission from "./assets/mission.png";
+import story from "./assets/story.png";
 
 export default function AboutUs() {
   return (
@@ -12,25 +14,33 @@ export default function AboutUs() {
       <div className="us">
         <div className="left">
           <div className="title">
-            About <span>Us</span>
+            The <span>Who</span>, The <span>What</span> and The <span>Why</span>{" "}
+            Of Azabox
           </div>
-          <div className="content">
-            A few things you need to know about azabox
-          </div>
+          <div className="content">A few things you need to know about us</div>
         </div>
 
         <div className="right">
-          <img src={logo} alt="" />
+          <img src={about} alt="" />
         </div>
       </div>
 
+      <div className="missionImg">
+        <img src={mission} alt="" />
+      </div>
       <div className="mission">
-        <div className="title">
-          Our <span>mission</span>
+        <div className="imgSpace">
+          <img src={mission} alt="" />
         </div>
-        <div className="content">
-          We're on a path to make financial management accessible to individuals
-          and businesses who want to take personal control of their finances.
+        <div className="cont">
+          <div className="title">
+            Our <span>mission</span>
+          </div>
+          <div className="content">
+            We're on a path to make financial management accessible to
+            individuals and businesses who want to take personal control of
+            their finances.
+          </div>
         </div>
       </div>
       <div className="story">
@@ -50,13 +60,24 @@ export default function AboutUs() {
             finances whenever, wherever. Reliably, secure and safe.
           </div>
         </div>
+        <div className="storyImg">
+          <img src={story} alt="" />
+        </div>
         <div className="container">
-          So, have we convinced you enough? if we have, why not sign up to our
-          waiting list so you’ll be notified when we launch
+          <div className="storyImgSpace">
+            <img src={story} alt="" />
+          </div>
+          <div className="cont">
+            <h3>
+              So, have we convinced you enough? if we have, why not sign up to
+              our waiting list so you’ll be notified when we launch
+            </h3>
+            <a href="/">Join waitlist {">>"}</a>
+          </div>
         </div>
       </div>
       <div className="bottom">
-          <Bottom />
+        <Bottom />
       </div>
     </div>
   );

@@ -12,15 +12,17 @@ import { useState } from "react";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   return (
     <div className="app">
       <Router>
-        <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Switch>
           <Route exact path="/">
-            <div className="section">
+            <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <div className={"section " + (success && "active")}>
               <div className="intro">
-                <Intro />
+                <Intro success={success} setSuccess={setSuccess} />
               </div>
 
               <div className="abt">
@@ -32,11 +34,16 @@ function App() {
               </div>
 
               <div className="bot">
-                <Bottom />
+                <Bottom success={success} setSuccess={setSuccess} />
               </div>
             </div>
           </Route>
-          <Route path="/about"><div className="aboutUs"> <AboutUs /> </div></Route>
+          <Route path="/about">
+            <div className="aboutUs">
+              {" "}
+              <AboutUs />{" "}
+            </div>
+          </Route>
         </Switch>
       </Router>
     </div>
