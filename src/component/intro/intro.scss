@@ -44,6 +44,8 @@
     overflow: hidden;
     z-index: 2;
     background-color: #e5e5e5;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 
     @include responsive(sm) {
       padding: 50px 25px;
