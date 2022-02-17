@@ -23,8 +23,10 @@ export default function Business() {
             className="individual"
             style={
               individualSection
-                ? { backgroundColor: "#36e29a", color: "#fff" }
-                : { backgroundColor: "#fff", color: "#371841" }
+                ? { backgroundColor: "#36e29a", color: "#fff",  }
+                : { backgroundColor: "#fff", color: "#371841",  }
+
+                
             }
             onClick={() =>
               setIndividualSection(!individualSection) ||

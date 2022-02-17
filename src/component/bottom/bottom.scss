@@ -58,10 +58,10 @@
         }
 
         .input {
-          margin-top: 20px;
+          // margin-top: 20px;
           width: 80%;
           background-color: #042639;
-          height: 50px;
+          // height: 50px;
           border-radius: 40px;
           display: flex;
           align-items: center;
@@ -73,7 +73,7 @@
           }
 
           @include responsive(small) {
-            width: 100%;
+            width: 80%;
             margin-top: 5px;
             height: 35px;
           }
@@ -139,7 +139,7 @@
 
       .container {
         display: flex;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
         margin-left: -15px;
         margin-top: 30px;
         cursor: pointer;
@@ -195,9 +195,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 20px;
 
     @include responsive(small) {
       flex-direction: column;
+      margin-left: -20%;
     }
 
     .logo {
