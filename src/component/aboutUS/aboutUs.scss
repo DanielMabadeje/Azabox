@@ -11,74 +11,88 @@
 
   .us {
     width: 100%;
-    height: 70vh;
+    height: auto;
     display: flex;
-    padding: 60px 80px;
+    padding: 150px 80px;
 
-    @include responsive(large){
-      height: 40vh;
+    @include responsive(large) {
+      height: auto;
       padding: 0px 40px;
       margin-top: 150px;
       overflow: hidden;
+      padding-bottom: 50px;
     }
     @include responsive(small) {
       flex-direction: column;
       padding-bottom: 0;
       padding-top: 40px;
     }
+    @include responsive(lg) {
+      flex-direction: column;
+      margin-top: 50px;
+      height: auto;
+    }
 
     .left {
-      width: 50%;
+      flex: 0.6;
       padding: 120px 0;
       overflow: hidden;
 
-      @include responsive(large){
+      @include responsive(large) {
         width: 70%;
       }
       @include responsive(small) {
         width: 100%;
         overflow: hidden;
-        padding-top: 60px;
+        padding-top: 10px;
       }
 
       .title {
-        font-size: 45px;
-        font-weight: 600;
-        color: #371841;
+        font-size: 50px;
+        font-weight: 500;
+        color: #200e32;
         > span {
-          color: #36e29a;
+          color: #18a489;
+        }
+        @include responsive(sm) {
+          font-size: 30px;
+          margin-top: 30px;
         }
       }
 
       .content {
         position: relative;
         top: 70px;
-        color: #36e29a;
+        color: #200e32;
+        font-size: 18px;
+        font-weight: 500;
 
         @include responsive(small) {
           top: 50px;
+          font-size: 14px;
         }
       }
     }
 
     .right {
+      flex: 0.4;
       position: relative;
       right: 0;
-      top: 60px;
-      width: 40%;
+      top: 20px;
       overflow: hidden;
 
-      @include responsive(large){
+      @include responsive(large) {
         width: 100%;
       }
       @include responsive(small) {
-        width: 120%;
-        top: 0;
+        width: 160%;
+        top: -20px;
+        right: 30px;
         overflow: hidden;
       }
       > img {
-        height: 531.23px;
-        width: 450px;
+        height: 450px;
+        width: 400px;
 
         @include responsive(small) {
           width: 300px;
@@ -88,87 +102,128 @@
     }
   }
 
+  .missionImg {
+    position: absolute;
+    top: 650px;
+    left: 80px;
+    @include responsive(sm) {
+      display: none;
+    }
+    @include responsive(lg) {
+      display: none;
+    }
+  }
   .mission {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #cde3ef;
-    width: 100%;
+    width: 94%;
+    margin-left: 40px;
     height: auto;
     padding: 100px 80px;
+    overflow: hidden;
 
-    @include responsive(large){
+    @include responsive(large) {
       padding: 100px 40px;
     }
     @include responsive(small) {
       flex-direction: column;
+      padding: 50px 40px;
+      margin-left: 15px;
+    }
+    @include responsive(lg) {
+      flex-direction: column;
     }
 
-    .title {
-      width: 40%;
-      font-size: 40px;
-      font-weight: 700;
-      color: #371841;
-      > span {
-        color: #36e29a;
-      }
-
-      @include responsive(large){
-        width: 70%;
-      }
-      @include responsive(small) {
-        width: 100%;
+    .imgSpace {
+      flex: 2;
+      img {
+        display: none;
+        @include responsive(sm) {
+          display: block;
+        }
+        @include responsive(lg) {
+          display: block;
+        }
       }
     }
+    .cont {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      .title {
+        width: 40%;
+        font-size: 40px;
+        font-weight: 700;
+        color: #371841;
+        > span {
+          color: #18a489;
+        }
 
-    .content {
-      margin-left: 20px;
-      font-size: 20px;
-      font-weight: 300;
-      color: #371841;
-      line-height: 2;
+        @include responsive(large) {
+          width: 70%;
+        }
+        @include responsive(small) {
+          width: 100%;
+        }
+        @include responsive(lg) {
+          margin-left: 10px;
+        }
+      }
 
-      @include responsive(small) {
-        width: 100%;
-        margin-top: 15px;
+      .content {
+        font-size: 20px;
+        font-weight: 300;
+        color: #371841;
+        line-height: 2.5;
+
+        @include responsive(small) {
+          width: 100%;
+          margin-top: 15px;
+        }
       }
     }
   }
 
   .story {
     width: 100%;
-    height: 145vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: 60px 80px;
+    padding-bottom: 180px;
     overflow: hidden;
 
-    @include responsive(large){
+    @include responsive(large) {
       padding: 60px 40px;
     }
     @include responsive(small) {
       padding: 0;
-      height: 170vh;
-      padding-top: 40px;
+      height: auto;
+      padding-top: 10px;
     }
 
     .cont {
       display: flex;
-      width: 100%;
+      width: 92%;
+      margin-left: 60px;
 
       @include responsive(small) {
         flex-direction: column;
         width: 90%;
+        margin-left: 5px;
       }
       .title {
-        width: 133%;
+        flex: 2;
         font-size: 40px;
         font-weight: bold;
         color: #371841;
         > span {
-          color: #36e29a;
+          color: #18a489;
         }
 
-        @include responsive(large){
+        @include responsive(large) {
           width: 190%;
         }
         @include responsive(small) {
@@ -180,7 +235,7 @@
       }
 
       .content {
-        margin-left: 70px;
+        flex: 3;
         font-size: 20px;
         font-weight: 300;
         color: #371841;
@@ -190,26 +245,76 @@
           line-height: 1.5;
           margin-left: 55px;
           margin-top: 10px;
+          margin-bottom: 30px;
         }
       }
     }
 
+    .storyImg {
+      height: auto;
+      position: absolute;
+      top: 1550px;
+      left: 100px;
+      z-index: 1;
+      @include responsive(sm) {
+        display: none;
+      }
+      @include responsive(lg) {
+        display: none;
+      }
+    }
     .container {
       background-color: #cde3ef;
-      font-size: 40px;
-      font-weight: 700;
-      color: #371841;
-      line-height: 2;
-      padding: 69px 108px;
+      display: flex;
+      padding: 40px 80px;
       border-radius: 20px;
       position: relative;
-      top: 100px;
+      top: 80px;
 
       @include responsive(small) {
-        font-size: 30px;
-        width: 140%;
-        line-height: 1.5;
-        margin-left: -80px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 20px 0;
+        top: 0;
+      }
+      @include responsive(lg) {
+        flex-direction: column;
+      }
+      .storyImgSpace {
+        flex: 2;
+        img {
+          display: none;
+          @include responsive(sm) {
+            display: block;
+          }
+          @include responsive(lg) {
+            display: block;
+          }
+        }
+      }
+      .cont {
+        flex: 3.5;
+        display: flex;
+        flex-direction: column;
+        h3 {
+          font-size: 40px;
+          font-weight: 700;
+          color: #371841;
+          line-height: 2;
+          @include responsive(small) {
+            font-size: 30px;
+            line-height: 1.5;
+          }
+        }
+        a {
+          font-size: 20px;
+          color: #371841;
+          @include responsive(sm) {
+            font-size: 20px;
+          }
+        }
       }
     }
   }
@@ -218,10 +323,10 @@
     width: 100%;
     padding: 60px 40px;
 
-    @include responsive(large){
+    @include responsive(large) {
       padding: 60px 20px;
     }
-    @include responsive(small){
+    @include responsive(small) {
       padding: 40px 20px;
     }
   }

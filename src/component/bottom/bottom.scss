@@ -5,8 +5,12 @@
   flex-direction: column;
   background-color: #042e45;
   padding: 60px 80px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
 
-  @include responsive(small){
+  @include responsive(small) {
     padding: 20px 30px;
   }
 
@@ -14,8 +18,27 @@
     display: flex;
     padding-bottom: 30px;
 
-    @include responsive(small){
+    @include responsive(small) {
       flex-direction: column;
+    }
+
+    .success {
+      display: none;
+    }
+    &.active {
+      .success {
+        display: block;
+        position: fixed;
+        top: 200px;
+        z-index: 3;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      .left,
+      .right {
+        opacity: 0.2;
+      }
     }
     .left {
       width: 100%;
@@ -28,29 +51,29 @@
           font-weight: 500;
           color: #36e29a;
 
-          @include responsive(small){
+          @include responsive(small) {
             font-size: 20px;
             font-weight: 300;
           }
         }
 
         .input {
-          margin-top: 20px;
+          // margin-top: 20px;
           width: 80%;
           background-color: #042639;
-          height: 50px;
+          // height: 50px;
           border-radius: 40px;
           display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 0 10px;
           padding-right: 2px;
-          ::placeholder{
+          ::placeholder {
             color: #269969;
           }
 
-          @include responsive(small){
-            width: 100%;
+          @include responsive(small) {
+            width: 80%;
             margin-top: 5px;
             height: 35px;
           }
@@ -61,10 +84,10 @@
             width: 80%;
             border: none;
 
-            @include responsive(small){
+            @include responsive(small) {
               font-size: 12px;
             }
-            
+
             &:focus {
               outline: none;
             }
@@ -79,11 +102,11 @@
             color: #36e29a;
             overflow: hidden;
             transition: all 1s ease;
-            &:hover{
+            &:hover {
               transform: scale(1.1);
             }
 
-            @include responsive(small){
+            @include responsive(small) {
               height: 30px;
               width: 30%;
             }
@@ -97,7 +120,7 @@
       display: flex;
       flex-direction: column;
 
-      @include responsive(small){
+      @include responsive(small) {
         width: 100%;
       }
 
@@ -106,7 +129,7 @@
         font-weight: 500;
         color: #36e29a;
 
-        @include responsive(small){
+        @include responsive(small) {
           font-size: 20px;
           font-weight: 300;
           margin-top: 35px;
@@ -116,7 +139,7 @@
 
       .container {
         display: flex;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
         margin-left: -15px;
         margin-top: 30px;
         cursor: pointer;
@@ -137,7 +160,7 @@
             overflow: hidden;
           }
 
-          @include responsive(small){
+          @include responsive(small) {
             height: 40px;
             width: 120px;
             padding: 0 5px;
@@ -148,14 +171,14 @@
             height: 25px;
             margin-right: 10px;
 
-            @include responsive(small){
+            @include responsive(small) {
               width: 18px;
               height: 18px;
             }
           }
 
-          .content{
-            @include responsive(small){
+          .content {
+            @include responsive(small) {
               font-size: 10px;
             }
           }
@@ -172,9 +195,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 20px;
 
-    @include responsive(small){
+    @include responsive(small) {
       flex-direction: column;
+      margin-left: -20%;
     }
 
     .logo {
@@ -194,7 +219,7 @@
       width: 15%;
       justify-content: space-between;
 
-      @include responsive(small){
+      @include responsive(small) {
         width: 100%;
         justify-content: space-evenly;
         margin-top: 15px;

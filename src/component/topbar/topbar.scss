@@ -5,7 +5,7 @@
   width: 100%;
   background-color: #e5e5e5;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   overflow: hidden;
   box-shadow: 2px 5px 15px -8px rgba(0, 0, 0, 0.55);
@@ -29,10 +29,12 @@
       padding: 23px 30px;
     }
 
-    .logo > img {
-      height: 45px;
-      width: 120px;
-      cursor: pointer;
+    .logo {
+      img {
+        height: 45px;
+        width: 120px;
+        cursor: pointer;
+      }
     }
 
     .bar {
@@ -41,6 +43,8 @@
       display: flex;
       align-items: center;
       .barLeft {
+        width: 100%;
+        padding: 0px 20px;
         display: flex;
         align-items: center;
         overflow: hidden;
@@ -63,22 +67,8 @@
             margin-left: 25px;
             text-decoration: none;
             font-size: 16px;
-            color: #36e29a;
+            color: #042e45;
             font-weight: 300;
-          }
-        }
-
-        .join {
-          background-color: #042e45;
-          width: 180px;
-          height: 50px;
-          border: none;
-          border-radius: 30px;
-          color: #36e29a;
-          margin-left: 50px;
-          transition: all 1s ease;
-          &:hover {
-            transform: scale(1.1);
           }
         }
       }
@@ -113,6 +103,27 @@
         }
       }
     }
+
+    .join {
+      background-color: #042e45;
+      width: 180px;
+      height: 50px;
+      border: none;
+      border-radius: 30px;
+      color: #36e29a;
+      margin-left: 50px;
+      transition: all 1s ease;
+
+      @include responsive(lg) {
+        display: none;
+      }
+      @include responsive(small) {
+        display: none;
+      }
+      @include responsive(sm) {
+        display: none;
+      }
+    }
   }
   &.active {
     background-color: #f29947;
@@ -136,13 +147,20 @@
   }
 
   .menu {
-    background-color: transparent;
     width: 60%;
     height: 100vh;
     position: fixed;
     box-shadow: 2px 5px 15px -8px rgba(0, 0, 0, 0.55);
     -webkit-box-shadow: 2px 5px 15px -8px rgba(0, 0, 0, 0.55);
     -moz-box-shadow: 2px 5px 15px -8px rgba(0, 0, 0, 0.55);
+    left: -1000px;
+    transition: all 1s ease;
+    @include responsive(sm) {
+      left: -300px;
+    }
+    @include responsive(lg) {
+      left: -500px;
+    }
 
     .menuContainer {
       padding-top: 20%;
@@ -171,7 +189,6 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        animation: buttonBlink 1s infinite;
 
         .join {
           background-color: #042e45;
@@ -187,17 +204,13 @@
           }
         }
       }
-      @keyframes buttonBlink {
-        100%{
-          opacity: 0;
-        }
-      }
     }
 
     &.active {
       transition: all 1s ease;
       background-color: #f29947;
       color: #e5e5e5;
+      left: 0;
     }
   }
 }

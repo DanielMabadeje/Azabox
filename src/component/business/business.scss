@@ -2,10 +2,12 @@
 
 .business {
   background-color: #e5e5e5;
+  overflow: hidden;
 
   .header {
     display: flex;
     align-items: center;
+    // text-align: center;
     width: 100%;
     height: 100px;
     overflow: hidden;
@@ -24,7 +26,7 @@
       color: #36e29a;
       width: 18%;
 
-      @include responsive(desk){
+      @include responsive(desk) {
         width: 30%;
       }
       @include responsive(large) {
@@ -39,7 +41,7 @@
       }
 
       @include responsive(sm) {
-        width: 40%;
+        width: 50%;
       }
 
       > span {
@@ -59,30 +61,23 @@
       align-items: center;
       justify-content: center;
       background-color: #fff;
+      overflow: hidden;
 
-      @include responsive(desk){
-        width: 40%;
-      }
       @include responsive(large) {
-        width: 90%;
+        width: 100%;
         height: 50px;
         margin-left: 0;
-        margin-right: 100px;
+        margin-right: 200px;
       }
 
       @include responsive(lg) {
         width: 200%;
-      }
-
-      @include responsive(small) {
-        width: 50%;
-        height: 50px;
-        margin-left: 60px;
+        margin-right: 0;
       }
 
       @include responsive(sm) {
         justify-content: center;
-        margin-left: 40px;
+        margin-left: -10%;
         width: 80%;
         height: 55px;
       }
@@ -95,9 +90,7 @@
         background-color: #36e29a;
         color: #fff;
         transition: all 1s ease;
-        &:hover {
-          transform: scale(1.1);
-        }
+        height: 100%;
       }
       .business {
         padding: 9px 5px;
@@ -107,14 +100,28 @@
         background-color: #fff;
         color: #371841;
         transition: all 1s ease;
-        &:hover {
-          transform: scale(1.1);
-        }
       }
     }
   }
 
   .individualSection {
+    transition: all 0.5s ease;
+    display: none;
+    left: -3000px;
+    // @include responsive(sm) {
+    //   left: -1000px;
+    // }
+    // @include responsive(lg) {
+    //   left: -1000px;
+    // }
+    // @include responsive(large) {
+    //   left: -1300px;
+    // }
+
+    &.active {
+      display: block;
+      left: 0;
+    }
     .mid {
       width: 100%;
       height: 400px;
@@ -185,9 +192,7 @@
             border-radius: 40px;
             border: none;
             transition: all 1s ease;
-            &:hover {
-              transform: scale(1.1);
-            }
+            text-decoration: none;
           }
         }
       }
@@ -224,15 +229,19 @@
         @include responsive(sm) {
           flex-direction: column;
         }
+        @include responsive(lg) {
+          flex-direction: column;
+        }
         .firstImg {
           width: 100%;
+          overflow: visible;
 
           @include responsive(lg) {
             width: 70%;
           }
 
-          @include responsive(small) {
-            width: 50%;
+          @include responsive(sm) {
+            width: 100%;
             overflow: visible;
           }
 
@@ -266,33 +275,10 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #f29947;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .tracking {
-            font-size: 25px;
+            width: 70%;
+            font-size: 40px;
             font-weight: 500;
             color: #f29947;
             margin-top: 30px;
@@ -301,6 +287,9 @@
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 100%;
             }
           }
 
@@ -318,6 +307,13 @@
               margin-top: 15px;
             }
           }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
+            }
+          }
         }
       }
 
@@ -331,9 +327,12 @@
         @include responsive(sm) {
           flex-direction: column;
         }
+        @include responsive(lg) {
+          flex-direction: column;
+        }
 
         .secondContent {
-          width: 100%;
+          flex: 0.5;
           padding-top: 50px;
           padding-right: 50px;
           padding-left: 50px;
@@ -342,33 +341,10 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #f29947;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .save {
-            font-size: 25px;
+            width: 50%;
+            font-size: 40px;
             font-weight: 500;
             color: #f29947;
             margin-top: 30px;
@@ -377,6 +353,9 @@
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 100%;
             }
           }
 
@@ -394,17 +373,28 @@
               margin-top: 15px;
             }
           }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
+            }
+          }
         }
 
         .secondImg {
-          width: 100%;
+          flex: 0.5;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: visible;
 
           @include responsive(lg) {
             width: 80%;
           }
 
-          @include responsive(small) {
-            width: 50%;
+          @include responsive(sm) {
+            width: 80%;
             margin-top: 30px;
             overflow: visible;
           }
@@ -441,15 +431,22 @@
         @include responsive(sm) {
           flex-direction: column;
         }
+        @include responsive(lg) {
+          flex-direction: column;
+        }
         .thirdImg {
           width: 100%;
+          overflow: visible;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           @include responsive(lg) {
             width: 80%;
           }
 
           @include responsive(small) {
-            width: 50%;
+            width: 100%;
             overflow: visible;
           }
 
@@ -484,33 +481,10 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #f29947;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .warren {
-            font-size: 25px;
+            width: 50%;
+            font-size: 40px;
             font-weight: 500;
             color: #f29947;
             margin-top: 30px;
@@ -519,6 +493,9 @@
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 100%;
             }
           }
 
@@ -536,12 +513,38 @@
               margin-top: 15px;
             }
           }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
+            }
+          }
         }
       }
     }
   }
 
   .businessSection {
+    transition: all 0.5s ease;
+    display: none;
+    // @include responsive(large) {
+    //   margin-top: -271%;
+    //   right: -1300px;
+    // }
+    // @include responsive(sm) {
+    //   margin-top: -430% !important;
+    //   right: -1000px;
+    // }
+    // @include responsive(lg) {
+    //   margin-top: -437%;
+    //   right: -1000px;
+    // }
+
+    &.active {
+      display: block;
+    }
+
     .mid {
       width: 100%;
       height: 400px;
@@ -586,7 +589,7 @@
             font-weight: 400;
             color: #fff;
 
-            @include responsive(lg){
+            @include responsive(lg) {
               width: 85%;
               text-align: center;
             }
@@ -608,7 +611,7 @@
             text-align: center;
             line-height: 2;
 
-            @include responsive(lg){
+            @include responsive(lg) {
               width: 80%;
               font-weight: 200;
               text-align: center;
@@ -628,15 +631,13 @@
             font-size: 18px;
             padding: 10px 43px;
             background-color: #f29947;
-            color: #371841;
+            color: white;
             border-radius: 40px;
             border: none;
             transition: all 1s ease;
-            &:hover {
-              transform: scale(1.1);
-            }
+            text-decoration: none;
 
-            @include responsive(small){
+            @include responsive(small) {
               margin-top: 20px;
             }
           }
@@ -675,15 +676,22 @@
         @include responsive(sm) {
           flex-direction: column;
         }
+        @include responsive(lg) {
+          flex-direction: column;
+        }
         .firstImg {
           width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: visible;
 
           @include responsive(lg) {
             width: 70%;
           }
 
           @include responsive(small) {
-            width: 50%;
+            width: 100%;
             overflow: visible;
           }
 
@@ -717,41 +725,24 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #36e29a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .plan {
-            font-size: 25px;
+            width: 50%;
+            font-size: 40px;
             font-weight: 500;
-            color: #36e29a;
+            color: #18a489;
             margin-top: 30px;
 
             @include responsive(small) {
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 100%;
+            }
+            @include responsive(large) {
+              width: 80%;
             }
           }
 
@@ -769,6 +760,13 @@
               margin-top: 15px;
             }
           }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
+            }
+          }
         }
       }
 
@@ -782,6 +780,9 @@
         @include responsive(sm) {
           flex-direction: column;
         }
+        @include responsive(lg) {
+          flex-direction: column;
+        }
 
         .secondContent {
           width: 100%;
@@ -793,41 +794,21 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #36e29a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .manage {
-            font-size: 25px;
+            width: 70%;
+            font-size: 40px;
             font-weight: 500;
-            color: #36e29a;
+            color: #18a489;
             margin-top: 30px;
 
             @include responsive(small) {
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 150%;
             }
           }
 
@@ -845,17 +826,28 @@
               margin-top: 15px;
             }
           }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
+            }
+          }
         }
 
         .secondImg {
           width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: visible;
 
           @include responsive(lg) {
             width: 80%;
           }
 
-          @include responsive(small) {
-            width: 50%;
+          @include responsive(sm) {
+            width: 100%;
             margin-top: 30px;
             overflow: visible;
           }
@@ -892,15 +884,22 @@
         @include responsive(sm) {
           flex-direction: column;
         }
+        @include responsive(lg) {
+          flex-direction: column;
+        }
         .thirdImg {
           width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: visible;
 
           @include responsive(lg) {
             width: 80%;
           }
 
           @include responsive(small) {
-            width: 50%;
+            width: 100%;
             overflow: visible;
           }
 
@@ -934,41 +933,21 @@
             padding: 0;
             width: 100%;
           }
-          .circle {
-            width: 85px;
-            height: 85px;
-            background-color: #36e29a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include responsive(small) {
-              width: 35px;
-              height: 35px;
-            }
-
-            > img {
-              width: 25px;
-              height: 25px;
-
-              @include responsive(small) {
-                width: 15px;
-                height: 15px;
-              }
-            }
-          }
 
           .track {
-            font-size: 25px;
+            width: 50%;
+            font-size: 40px;
             font-weight: 500;
-            color: #36e29a;
+            color: #18a489;
             margin-top: 30px;
 
             @include responsive(small) {
               font-size: 20px;
               margin-top: 15px;
               font-weight: 400;
+            }
+            @include responsive(lg) {
+              width: 100%;
             }
           }
 
@@ -984,6 +963,13 @@
               font-weight: 300;
               font-size: 15px;
               margin-top: 15px;
+            }
+          }
+          a {
+            font-size: 20px;
+            color: #371841;
+            @include responsive(sm) {
+              font-size: 15px;
             }
           }
         }

@@ -28,8 +28,6 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
                 Contact Us
               </a>
             </div>
-
-            <button className="join">Join Waitlist</button>
           </div>
 
           <div className="barRight">
@@ -40,27 +38,44 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
             </div>
           </div>
         </div>
+        <button className="join">Join Waitlist</button>
       </div>
 
-      <div className={"menu " + (menuOpen && "active")} style={menuOpen ? {visibility: "visible", transition: "all 1s ease"} : {visibility: "hidden", transition: "all 1s ease"}}>
-        <div className="menuContainer" style={menuOpen ? {display: "block"} : {display: "none"}}>
+      <div className={"menu " + (menuOpen && "active")}>
+        <div className="menuContainer">
           <div className="menuCont">
-            <Link to="/about" className="menuLink" onClick={()=> setMenuOpen(!menuOpen)}>
+            <Link
+              to="/about"
+              className="menuLink"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
               About Us
             </Link>
           </div>
           <div className="menuCont">
-            <a href="#business" className="menuLink" onClick={()=> setMenuOpen(!menuOpen)}>
+            <a
+              href="#business"
+              className="menuLink"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
               For Business
             </a>
           </div>
           <div className="menuCont">
-            <a href="#contact" className="menuLink" onClick={()=> setMenuOpen(!menuOpen)}>
+            <a
+              href="#contact"
+              className="menuLink"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
               Contact Us
             </a>
           </div>
 
-          <div className="button"><button className="join"  onClick={()=> setMenuOpen(!menuOpen)}>Join Waitlist</button></div>
+          <div className="button">
+            <button className="join" onClick={() => setMenuOpen(!menuOpen)}>
+              Join Waitlist
+            </button>
+          </div>
         </div>
       </div>
     </div>
