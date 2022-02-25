@@ -125,3 +125,12 @@ nav{
 .text-underline{
     text-decoration: underline;
 }
+
+.btn:hover{
+          align-items: center;
+          justify-content: center;
+          /* width: 200px; */
+          /* height: 50px; */
+          border: 2px solid rgba(0, 0, 0, 0.085);
+          box-shadow: 5px 4px #E5E5E5 , 5px 4px 0px 1px black
+}
